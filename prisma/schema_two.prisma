@@ -1,0 +1,31 @@
+generator client {
+  provider = "prisma-client-js"
+  output = "../prisma-client/db-two"
+}
+
+
+datasource db {
+  provider = "sqlserver"
+  url      = env("DATABASE_URL_TWO")
+}
+
+
+model QrySLWC {
+  wc       String     @unique(map: "QrySLWC_wc_unique") @db.NVarChar(8)
+  description      String?   @db.NVarChar(200)
+}
+
+model TblModel {
+  ModelID      String  @id(map: "PK_TblModel") @db.NVarChar(2)
+  NamaModel    String? @db.NVarChar(200)
+  Aktif        Boolean
+  ProductCode  String? @db.NChar(10)
+  Kategori     String? @db.NVarChar(20)
+  InisialModel String? @db.NVarChar(25)
+  Type         String? @db.NVarChar(50)
+  Family       String? @db.NVarChar(20)
+  EkivalenUnit Float?  @db.Real
+  @@index([ModelID], map: "IX_TblModel")
+}
+
+

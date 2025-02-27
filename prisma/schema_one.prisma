@@ -1,0 +1,77 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../prisma-client/db-one"
+}
+
+datasource db {
+  provider = "sqlserver"
+  url      = env("DATABASE_URL_ONE")
+}
+
+model access_tokens {
+  id             String    @id @default(uuid())
+  tokenable_type String    @db.VarChar(255)
+  tokenable_id   String    @db.VarChar(255)
+  name           String    @db.VarChar(255)
+  token          String    @unique(map: "access_tokens_token_unique") @db.VarChar(64)
+  abilities      String?   @db.Text
+  last_used_at   DateTime? @db.DateTime
+  expires_at     DateTime? @db.DateTime
+  created_at     DateTime? @db.DateTime
+  updated_at     DateTime? @db.DateTime
+}
+
+model master_checklist_details {
+  id                                               String            @id @default(uuid())
+  checklist_header_id                              String
+  name                                             String            @db.VarChar(255)
+  short_desc                                       String?           @db.VarChar(255)
+  required_image                                   String?           @db.VarChar(255)
+  updated_by                                       String
+  created_by                                       String
+  updated_at                                       DateTime?         @db.DateTime
+  created_at                                       DateTime?         @db.DateTime
+  master_checklists                                master_checklists @relation(fields: [checklist_header_id], references: [id], onUpdate: NoAction, map: "FK_master_checklist_details_master_checklists")
+  users_master_checklist_details_updated_byTousers users             @relation("master_checklist_details_updated_byTousers", fields: [updated_by], references: [id], onUpdate: NoAction, map: "FK_master_checklist_details_users")
+  users_master_checklist_details_created_byTousers users             @relation("master_checklist_details_created_byTousers", fields: [created_by], references: [id], onUpdate: NoAction, map: "FK_master_checklist_details_users1")
+}
+
+model users {
+  id                                                                  String                     @id @default(uuid())
+  name                                                                String                     @db.VarChar(255)
+  email                                                               String                     @unique(map: "users_email_unique") @db.VarChar(255)
+  role                                                                String?                    @db.VarChar(255)
+  password                                                            String                     @db.VarChar(255)
+  created_at                                                          DateTime?                  @db.DateTime
+  updated_at                                                          DateTime?                  @db.DateTime
+  master_checklist_details_master_checklist_details_updated_byTousers master_checklist_details[] @relation("master_checklist_details_updated_byTousers")
+  master_checklist_details_master_checklist_details_created_byTousers master_checklist_details[] @relation("master_checklist_details_created_byTousers")
+  master_checklists_master_checklists_updated_byTousers               master_checklists[]        @relation("master_checklists_updated_byTousers")
+  master_checklists_master_checklists_created_byTousers               master_checklists[]        @relation("master_checklists_created_byTousers")
+}
+
+model master_checklists {
+  id                                        String                     @id @default(uuid())
+  name                                      String                     @db.VarChar(255)
+  short_desc                                String                     @db.VarChar(255)
+  workcenter                                String                     @db.VarChar(255)
+  model                                     String                     @db.VarChar(255)
+  status                                    Boolean
+  updated_by                                String
+  created_by                                String
+  updated_at                                DateTime?                  @db.DateTime
+  created_at                                DateTime?                  @db.DateTime
+  master_checklist_details                  master_checklist_details[]
+  users_master_checklists_updated_byTousers users                      @relation("master_checklists_updated_byTousers", fields: [updated_by], references: [id], onUpdate: NoAction, map: "FK_master_checklists_users")
+  users_master_checklists_created_byTousers users                      @relation("master_checklists_created_byTousers", fields: [created_by], references: [id], onUpdate: NoAction, map: "FK_master_checklists_users1")
+}
+
+model sysdiagrams {
+  name         String @db.NVarChar(128)
+  principal_id Int
+  diagram_id   Int    @id(map: "PK__sysdiagr__C2B05B61BB0923AC") @default(autoincrement())
+  version      Int?
+  definition   Bytes?
+
+  @@unique([principal_id, name], map: "UK_principal_name")
+}

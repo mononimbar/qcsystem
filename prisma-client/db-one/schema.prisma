@@ -66,6 +66,78 @@ model master_checklists {
   users_master_checklists_created_byTousers users                      @relation("master_checklists_created_byTousers", fields: [created_by], references: [id], onUpdate: NoAction, map: "FK_master_checklists_users1")
 }
 
+model master_image_checklists {
+  id                  String    @id @default(uuid())
+  checklist_detail_id String    @db.VarChar(255)
+  filename            String    @db.VarChar(255)
+  updated_by          String    @db.VarChar(255)
+  created_by          String    @db.VarChar(255)
+  updated_at          DateTime? @db.DateTime
+  created_at          DateTime? @db.DateTime
+}
+
+model order_checklists {
+  id           String    @id @default(uuid())
+  checklist_id String    @db.VarChar(255)
+  order_id     String    @db.VarChar(255)
+  model        String    @db.VarChar(255)
+  workcenter   String    @db.VarChar(255)
+  status       Boolean
+  date_open    DateTime? @db.DateTime
+  date_closed  DateTime? @db.DateTime
+  updated_by   String    @db.VarChar(255)
+  created_by   String    @db.VarChar(255)
+  updated_at   DateTime? @db.DateTime
+  created_at   DateTime? @db.DateTime
+}
+
+model order_checklist_details {
+  id                 String    @id @default(uuid())
+  order_checklist_id String    @db.VarChar(255)
+  checked            Boolean
+  notes_by_prod      String    @db.Text
+  notes_by_qc        String    @db.Text
+  updated_by         String    @db.VarChar(255)
+  created_by         String    @db.VarChar(255)
+  updated_at         DateTime? @db.DateTime
+  created_at         DateTime? @db.DateTime
+}
+
+model order_checklist_notes {
+  id                        String    @id @default(uuid())
+  order_checklist_detail_id String    @db.VarChar(255)
+  checked_status            Boolean
+  notes                     String    @db.Text
+  notes_by                  String    @db.VarChar(255)
+  updated_by                String    @db.VarChar(255)
+  created_by                String    @db.VarChar(255)
+  updated_at                DateTime? @db.DateTime
+  created_at                DateTime? @db.DateTime
+}
+
+model order_image_checklists {
+  id                        String    @id @default(uuid())
+  order_checklist_detail_id String    @db.VarChar(255)
+  filename                  String    @db.VarChar(255)
+  updated_by                String    @db.VarChar(255)
+  created_by                String    @db.VarChar(255)
+  updated_at                DateTime? @db.DateTime
+  created_at                DateTime? @db.DateTime
+}
+
+model order_image_notes {
+  id                       String    @id @default(uuid())
+  order_image_checklist_id String    @db.VarChar(255)
+  filename                 String    @db.VarChar(255)
+  status                   Boolean
+  notes                    String    @db.Text
+  notes_by                 String    @db.VarChar(255)
+  updated_by               String    @db.VarChar(255)
+  created_by               String    @db.VarChar(255)
+  updated_at               DateTime? @db.DateTime
+  created_at               DateTime? @db.DateTime
+}
+
 model sysdiagrams {
   name         String @db.NVarChar(128)
   principal_id Int

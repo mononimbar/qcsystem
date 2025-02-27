@@ -34,6 +34,36 @@ export type users = $Result.DefaultSelection<Prisma.$usersPayload>
  */
 export type master_checklists = $Result.DefaultSelection<Prisma.$master_checklistsPayload>
 /**
+ * Model master_image_checklists
+ * 
+ */
+export type master_image_checklists = $Result.DefaultSelection<Prisma.$master_image_checklistsPayload>
+/**
+ * Model order_checklists
+ * 
+ */
+export type order_checklists = $Result.DefaultSelection<Prisma.$order_checklistsPayload>
+/**
+ * Model order_checklist_details
+ * 
+ */
+export type order_checklist_details = $Result.DefaultSelection<Prisma.$order_checklist_detailsPayload>
+/**
+ * Model order_checklist_notes
+ * 
+ */
+export type order_checklist_notes = $Result.DefaultSelection<Prisma.$order_checklist_notesPayload>
+/**
+ * Model order_image_checklists
+ * 
+ */
+export type order_image_checklists = $Result.DefaultSelection<Prisma.$order_image_checklistsPayload>
+/**
+ * Model order_image_notes
+ * 
+ */
+export type order_image_notes = $Result.DefaultSelection<Prisma.$order_image_notesPayload>
+/**
  * Model sysdiagrams
  * 
  */
@@ -203,6 +233,66 @@ export class PrismaClient<
     * ```
     */
   get master_checklists(): Prisma.master_checklistsDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.master_image_checklists`: Exposes CRUD operations for the **master_image_checklists** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more Master_image_checklists
+    * const master_image_checklists = await prisma.master_image_checklists.findMany()
+    * ```
+    */
+  get master_image_checklists(): Prisma.master_image_checklistsDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.order_checklists`: Exposes CRUD operations for the **order_checklists** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more Order_checklists
+    * const order_checklists = await prisma.order_checklists.findMany()
+    * ```
+    */
+  get order_checklists(): Prisma.order_checklistsDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.order_checklist_details`: Exposes CRUD operations for the **order_checklist_details** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more Order_checklist_details
+    * const order_checklist_details = await prisma.order_checklist_details.findMany()
+    * ```
+    */
+  get order_checklist_details(): Prisma.order_checklist_detailsDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.order_checklist_notes`: Exposes CRUD operations for the **order_checklist_notes** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more Order_checklist_notes
+    * const order_checklist_notes = await prisma.order_checklist_notes.findMany()
+    * ```
+    */
+  get order_checklist_notes(): Prisma.order_checklist_notesDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.order_image_checklists`: Exposes CRUD operations for the **order_image_checklists** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more Order_image_checklists
+    * const order_image_checklists = await prisma.order_image_checklists.findMany()
+    * ```
+    */
+  get order_image_checklists(): Prisma.order_image_checklistsDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.order_image_notes`: Exposes CRUD operations for the **order_image_notes** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more Order_image_notes
+    * const order_image_notes = await prisma.order_image_notes.findMany()
+    * ```
+    */
+  get order_image_notes(): Prisma.order_image_notesDelegate<ExtArgs, ClientOptions>;
 
   /**
    * `prisma.sysdiagrams`: Exposes CRUD operations for the **sysdiagrams** model.
@@ -657,6 +747,12 @@ export namespace Prisma {
     master_checklist_details: 'master_checklist_details',
     users: 'users',
     master_checklists: 'master_checklists',
+    master_image_checklists: 'master_image_checklists',
+    order_checklists: 'order_checklists',
+    order_checklist_details: 'order_checklist_details',
+    order_checklist_notes: 'order_checklist_notes',
+    order_image_checklists: 'order_image_checklists',
+    order_image_notes: 'order_image_notes',
     sysdiagrams: 'sysdiagrams'
   };
 
@@ -673,7 +769,7 @@ export namespace Prisma {
 
   export type TypeMap<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, ClientOptions = {}> = {
     meta: {
-      modelProps: "access_tokens" | "master_checklist_details" | "users" | "master_checklists" | "sysdiagrams"
+      modelProps: "access_tokens" | "master_checklist_details" | "users" | "master_checklists" | "master_image_checklists" | "order_checklists" | "order_checklist_details" | "order_checklist_notes" | "order_image_checklists" | "order_image_notes" | "sysdiagrams"
       txIsolationLevel: Prisma.TransactionIsolationLevel
     }
     model: {
@@ -941,6 +1037,402 @@ export namespace Prisma {
           }
         }
       }
+      master_image_checklists: {
+        payload: Prisma.$master_image_checklistsPayload<ExtArgs>
+        fields: Prisma.master_image_checklistsFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.master_image_checklistsFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$master_image_checklistsPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.master_image_checklistsFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$master_image_checklistsPayload>
+          }
+          findFirst: {
+            args: Prisma.master_image_checklistsFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$master_image_checklistsPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.master_image_checklistsFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$master_image_checklistsPayload>
+          }
+          findMany: {
+            args: Prisma.master_image_checklistsFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$master_image_checklistsPayload>[]
+          }
+          create: {
+            args: Prisma.master_image_checklistsCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$master_image_checklistsPayload>
+          }
+          createMany: {
+            args: Prisma.master_image_checklistsCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          delete: {
+            args: Prisma.master_image_checklistsDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$master_image_checklistsPayload>
+          }
+          update: {
+            args: Prisma.master_image_checklistsUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$master_image_checklistsPayload>
+          }
+          deleteMany: {
+            args: Prisma.master_image_checklistsDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.master_image_checklistsUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          upsert: {
+            args: Prisma.master_image_checklistsUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$master_image_checklistsPayload>
+          }
+          aggregate: {
+            args: Prisma.Master_image_checklistsAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateMaster_image_checklists>
+          }
+          groupBy: {
+            args: Prisma.master_image_checklistsGroupByArgs<ExtArgs>
+            result: $Utils.Optional<Master_image_checklistsGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.master_image_checklistsCountArgs<ExtArgs>
+            result: $Utils.Optional<Master_image_checklistsCountAggregateOutputType> | number
+          }
+        }
+      }
+      order_checklists: {
+        payload: Prisma.$order_checklistsPayload<ExtArgs>
+        fields: Prisma.order_checklistsFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.order_checklistsFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$order_checklistsPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.order_checklistsFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$order_checklistsPayload>
+          }
+          findFirst: {
+            args: Prisma.order_checklistsFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$order_checklistsPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.order_checklistsFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$order_checklistsPayload>
+          }
+          findMany: {
+            args: Prisma.order_checklistsFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$order_checklistsPayload>[]
+          }
+          create: {
+            args: Prisma.order_checklistsCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$order_checklistsPayload>
+          }
+          createMany: {
+            args: Prisma.order_checklistsCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          delete: {
+            args: Prisma.order_checklistsDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$order_checklistsPayload>
+          }
+          update: {
+            args: Prisma.order_checklistsUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$order_checklistsPayload>
+          }
+          deleteMany: {
+            args: Prisma.order_checklistsDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.order_checklistsUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          upsert: {
+            args: Prisma.order_checklistsUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$order_checklistsPayload>
+          }
+          aggregate: {
+            args: Prisma.Order_checklistsAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateOrder_checklists>
+          }
+          groupBy: {
+            args: Prisma.order_checklistsGroupByArgs<ExtArgs>
+            result: $Utils.Optional<Order_checklistsGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.order_checklistsCountArgs<ExtArgs>
+            result: $Utils.Optional<Order_checklistsCountAggregateOutputType> | number
+          }
+        }
+      }
+      order_checklist_details: {
+        payload: Prisma.$order_checklist_detailsPayload<ExtArgs>
+        fields: Prisma.order_checklist_detailsFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.order_checklist_detailsFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$order_checklist_detailsPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.order_checklist_detailsFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$order_checklist_detailsPayload>
+          }
+          findFirst: {
+            args: Prisma.order_checklist_detailsFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$order_checklist_detailsPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.order_checklist_detailsFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$order_checklist_detailsPayload>
+          }
+          findMany: {
+            args: Prisma.order_checklist_detailsFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$order_checklist_detailsPayload>[]
+          }
+          create: {
+            args: Prisma.order_checklist_detailsCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$order_checklist_detailsPayload>
+          }
+          createMany: {
+            args: Prisma.order_checklist_detailsCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          delete: {
+            args: Prisma.order_checklist_detailsDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$order_checklist_detailsPayload>
+          }
+          update: {
+            args: Prisma.order_checklist_detailsUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$order_checklist_detailsPayload>
+          }
+          deleteMany: {
+            args: Prisma.order_checklist_detailsDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.order_checklist_detailsUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          upsert: {
+            args: Prisma.order_checklist_detailsUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$order_checklist_detailsPayload>
+          }
+          aggregate: {
+            args: Prisma.Order_checklist_detailsAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateOrder_checklist_details>
+          }
+          groupBy: {
+            args: Prisma.order_checklist_detailsGroupByArgs<ExtArgs>
+            result: $Utils.Optional<Order_checklist_detailsGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.order_checklist_detailsCountArgs<ExtArgs>
+            result: $Utils.Optional<Order_checklist_detailsCountAggregateOutputType> | number
+          }
+        }
+      }
+      order_checklist_notes: {
+        payload: Prisma.$order_checklist_notesPayload<ExtArgs>
+        fields: Prisma.order_checklist_notesFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.order_checklist_notesFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$order_checklist_notesPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.order_checklist_notesFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$order_checklist_notesPayload>
+          }
+          findFirst: {
+            args: Prisma.order_checklist_notesFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$order_checklist_notesPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.order_checklist_notesFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$order_checklist_notesPayload>
+          }
+          findMany: {
+            args: Prisma.order_checklist_notesFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$order_checklist_notesPayload>[]
+          }
+          create: {
+            args: Prisma.order_checklist_notesCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$order_checklist_notesPayload>
+          }
+          createMany: {
+            args: Prisma.order_checklist_notesCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          delete: {
+            args: Prisma.order_checklist_notesDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$order_checklist_notesPayload>
+          }
+          update: {
+            args: Prisma.order_checklist_notesUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$order_checklist_notesPayload>
+          }
+          deleteMany: {
+            args: Prisma.order_checklist_notesDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.order_checklist_notesUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          upsert: {
+            args: Prisma.order_checklist_notesUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$order_checklist_notesPayload>
+          }
+          aggregate: {
+            args: Prisma.Order_checklist_notesAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateOrder_checklist_notes>
+          }
+          groupBy: {
+            args: Prisma.order_checklist_notesGroupByArgs<ExtArgs>
+            result: $Utils.Optional<Order_checklist_notesGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.order_checklist_notesCountArgs<ExtArgs>
+            result: $Utils.Optional<Order_checklist_notesCountAggregateOutputType> | number
+          }
+        }
+      }
+      order_image_checklists: {
+        payload: Prisma.$order_image_checklistsPayload<ExtArgs>
+        fields: Prisma.order_image_checklistsFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.order_image_checklistsFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$order_image_checklistsPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.order_image_checklistsFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$order_image_checklistsPayload>
+          }
+          findFirst: {
+            args: Prisma.order_image_checklistsFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$order_image_checklistsPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.order_image_checklistsFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$order_image_checklistsPayload>
+          }
+          findMany: {
+            args: Prisma.order_image_checklistsFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$order_image_checklistsPayload>[]
+          }
+          create: {
+            args: Prisma.order_image_checklistsCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$order_image_checklistsPayload>
+          }
+          createMany: {
+            args: Prisma.order_image_checklistsCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          delete: {
+            args: Prisma.order_image_checklistsDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$order_image_checklistsPayload>
+          }
+          update: {
+            args: Prisma.order_image_checklistsUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$order_image_checklistsPayload>
+          }
+          deleteMany: {
+            args: Prisma.order_image_checklistsDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.order_image_checklistsUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          upsert: {
+            args: Prisma.order_image_checklistsUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$order_image_checklistsPayload>
+          }
+          aggregate: {
+            args: Prisma.Order_image_checklistsAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateOrder_image_checklists>
+          }
+          groupBy: {
+            args: Prisma.order_image_checklistsGroupByArgs<ExtArgs>
+            result: $Utils.Optional<Order_image_checklistsGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.order_image_checklistsCountArgs<ExtArgs>
+            result: $Utils.Optional<Order_image_checklistsCountAggregateOutputType> | number
+          }
+        }
+      }
+      order_image_notes: {
+        payload: Prisma.$order_image_notesPayload<ExtArgs>
+        fields: Prisma.order_image_notesFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.order_image_notesFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$order_image_notesPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.order_image_notesFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$order_image_notesPayload>
+          }
+          findFirst: {
+            args: Prisma.order_image_notesFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$order_image_notesPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.order_image_notesFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$order_image_notesPayload>
+          }
+          findMany: {
+            args: Prisma.order_image_notesFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$order_image_notesPayload>[]
+          }
+          create: {
+            args: Prisma.order_image_notesCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$order_image_notesPayload>
+          }
+          createMany: {
+            args: Prisma.order_image_notesCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          delete: {
+            args: Prisma.order_image_notesDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$order_image_notesPayload>
+          }
+          update: {
+            args: Prisma.order_image_notesUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$order_image_notesPayload>
+          }
+          deleteMany: {
+            args: Prisma.order_image_notesDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.order_image_notesUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          upsert: {
+            args: Prisma.order_image_notesUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$order_image_notesPayload>
+          }
+          aggregate: {
+            args: Prisma.Order_image_notesAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateOrder_image_notes>
+          }
+          groupBy: {
+            args: Prisma.order_image_notesGroupByArgs<ExtArgs>
+            result: $Utils.Optional<Order_image_notesGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.order_image_notesCountArgs<ExtArgs>
+            result: $Utils.Optional<Order_image_notesCountAggregateOutputType> | number
+          }
+        }
+      }
       sysdiagrams: {
         payload: Prisma.$sysdiagramsPayload<ExtArgs>
         fields: Prisma.sysdiagramsFieldRefs
@@ -1095,6 +1587,12 @@ export namespace Prisma {
     master_checklist_details?: master_checklist_detailsOmit
     users?: usersOmit
     master_checklists?: master_checklistsOmit
+    master_image_checklists?: master_image_checklistsOmit
+    order_checklists?: order_checklistsOmit
+    order_checklist_details?: order_checklist_detailsOmit
+    order_checklist_notes?: order_checklist_notesOmit
+    order_image_checklists?: order_image_checklistsOmit
+    order_image_notes?: order_image_notesOmit
     sysdiagrams?: sysdiagramsOmit
   }
 
@@ -5272,6 +5770,5556 @@ export namespace Prisma {
 
 
   /**
+   * Model master_image_checklists
+   */
+
+  export type AggregateMaster_image_checklists = {
+    _count: Master_image_checklistsCountAggregateOutputType | null
+    _min: Master_image_checklistsMinAggregateOutputType | null
+    _max: Master_image_checklistsMaxAggregateOutputType | null
+  }
+
+  export type Master_image_checklistsMinAggregateOutputType = {
+    id: string | null
+    checklist_detail_id: string | null
+    filename: string | null
+    updated_by: string | null
+    created_by: string | null
+    updated_at: Date | null
+    created_at: Date | null
+  }
+
+  export type Master_image_checklistsMaxAggregateOutputType = {
+    id: string | null
+    checklist_detail_id: string | null
+    filename: string | null
+    updated_by: string | null
+    created_by: string | null
+    updated_at: Date | null
+    created_at: Date | null
+  }
+
+  export type Master_image_checklistsCountAggregateOutputType = {
+    id: number
+    checklist_detail_id: number
+    filename: number
+    updated_by: number
+    created_by: number
+    updated_at: number
+    created_at: number
+    _all: number
+  }
+
+
+  export type Master_image_checklistsMinAggregateInputType = {
+    id?: true
+    checklist_detail_id?: true
+    filename?: true
+    updated_by?: true
+    created_by?: true
+    updated_at?: true
+    created_at?: true
+  }
+
+  export type Master_image_checklistsMaxAggregateInputType = {
+    id?: true
+    checklist_detail_id?: true
+    filename?: true
+    updated_by?: true
+    created_by?: true
+    updated_at?: true
+    created_at?: true
+  }
+
+  export type Master_image_checklistsCountAggregateInputType = {
+    id?: true
+    checklist_detail_id?: true
+    filename?: true
+    updated_by?: true
+    created_by?: true
+    updated_at?: true
+    created_at?: true
+    _all?: true
+  }
+
+  export type Master_image_checklistsAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which master_image_checklists to aggregate.
+     */
+    where?: master_image_checklistsWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of master_image_checklists to fetch.
+     */
+    orderBy?: master_image_checklistsOrderByWithRelationInput | master_image_checklistsOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: master_image_checklistsWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` master_image_checklists from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` master_image_checklists.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned master_image_checklists
+    **/
+    _count?: true | Master_image_checklistsCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: Master_image_checklistsMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: Master_image_checklistsMaxAggregateInputType
+  }
+
+  export type GetMaster_image_checklistsAggregateType<T extends Master_image_checklistsAggregateArgs> = {
+        [P in keyof T & keyof AggregateMaster_image_checklists]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateMaster_image_checklists[P]>
+      : GetScalarType<T[P], AggregateMaster_image_checklists[P]>
+  }
+
+
+
+
+  export type master_image_checklistsGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: master_image_checklistsWhereInput
+    orderBy?: master_image_checklistsOrderByWithAggregationInput | master_image_checklistsOrderByWithAggregationInput[]
+    by: Master_image_checklistsScalarFieldEnum[] | Master_image_checklistsScalarFieldEnum
+    having?: master_image_checklistsScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: Master_image_checklistsCountAggregateInputType | true
+    _min?: Master_image_checklistsMinAggregateInputType
+    _max?: Master_image_checklistsMaxAggregateInputType
+  }
+
+  export type Master_image_checklistsGroupByOutputType = {
+    id: string
+    checklist_detail_id: string
+    filename: string
+    updated_by: string
+    created_by: string
+    updated_at: Date | null
+    created_at: Date | null
+    _count: Master_image_checklistsCountAggregateOutputType | null
+    _min: Master_image_checklistsMinAggregateOutputType | null
+    _max: Master_image_checklistsMaxAggregateOutputType | null
+  }
+
+  type GetMaster_image_checklistsGroupByPayload<T extends master_image_checklistsGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<Master_image_checklistsGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof Master_image_checklistsGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], Master_image_checklistsGroupByOutputType[P]>
+            : GetScalarType<T[P], Master_image_checklistsGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type master_image_checklistsSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    checklist_detail_id?: boolean
+    filename?: boolean
+    updated_by?: boolean
+    created_by?: boolean
+    updated_at?: boolean
+    created_at?: boolean
+  }, ExtArgs["result"]["master_image_checklists"]>
+
+
+
+  export type master_image_checklistsSelectScalar = {
+    id?: boolean
+    checklist_detail_id?: boolean
+    filename?: boolean
+    updated_by?: boolean
+    created_by?: boolean
+    updated_at?: boolean
+    created_at?: boolean
+  }
+
+  export type master_image_checklistsOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "checklist_detail_id" | "filename" | "updated_by" | "created_by" | "updated_at" | "created_at", ExtArgs["result"]["master_image_checklists"]>
+
+  export type $master_image_checklistsPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "master_image_checklists"
+    objects: {}
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      checklist_detail_id: string
+      filename: string
+      updated_by: string
+      created_by: string
+      updated_at: Date | null
+      created_at: Date | null
+    }, ExtArgs["result"]["master_image_checklists"]>
+    composites: {}
+  }
+
+  type master_image_checklistsGetPayload<S extends boolean | null | undefined | master_image_checklistsDefaultArgs> = $Result.GetResult<Prisma.$master_image_checklistsPayload, S>
+
+  type master_image_checklistsCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<master_image_checklistsFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: Master_image_checklistsCountAggregateInputType | true
+    }
+
+  export interface master_image_checklistsDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, ClientOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['master_image_checklists'], meta: { name: 'master_image_checklists' } }
+    /**
+     * Find zero or one Master_image_checklists that matches the filter.
+     * @param {master_image_checklistsFindUniqueArgs} args - Arguments to find a Master_image_checklists
+     * @example
+     * // Get one Master_image_checklists
+     * const master_image_checklists = await prisma.master_image_checklists.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends master_image_checklistsFindUniqueArgs>(args: SelectSubset<T, master_image_checklistsFindUniqueArgs<ExtArgs>>): Prisma__master_image_checklistsClient<$Result.GetResult<Prisma.$master_image_checklistsPayload<ExtArgs>, T, "findUnique", ClientOptions> | null, null, ExtArgs, ClientOptions>
+
+    /**
+     * Find one Master_image_checklists that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {master_image_checklistsFindUniqueOrThrowArgs} args - Arguments to find a Master_image_checklists
+     * @example
+     * // Get one Master_image_checklists
+     * const master_image_checklists = await prisma.master_image_checklists.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends master_image_checklistsFindUniqueOrThrowArgs>(args: SelectSubset<T, master_image_checklistsFindUniqueOrThrowArgs<ExtArgs>>): Prisma__master_image_checklistsClient<$Result.GetResult<Prisma.$master_image_checklistsPayload<ExtArgs>, T, "findUniqueOrThrow", ClientOptions>, never, ExtArgs, ClientOptions>
+
+    /**
+     * Find the first Master_image_checklists that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {master_image_checklistsFindFirstArgs} args - Arguments to find a Master_image_checklists
+     * @example
+     * // Get one Master_image_checklists
+     * const master_image_checklists = await prisma.master_image_checklists.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends master_image_checklistsFindFirstArgs>(args?: SelectSubset<T, master_image_checklistsFindFirstArgs<ExtArgs>>): Prisma__master_image_checklistsClient<$Result.GetResult<Prisma.$master_image_checklistsPayload<ExtArgs>, T, "findFirst", ClientOptions> | null, null, ExtArgs, ClientOptions>
+
+    /**
+     * Find the first Master_image_checklists that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {master_image_checklistsFindFirstOrThrowArgs} args - Arguments to find a Master_image_checklists
+     * @example
+     * // Get one Master_image_checklists
+     * const master_image_checklists = await prisma.master_image_checklists.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends master_image_checklistsFindFirstOrThrowArgs>(args?: SelectSubset<T, master_image_checklistsFindFirstOrThrowArgs<ExtArgs>>): Prisma__master_image_checklistsClient<$Result.GetResult<Prisma.$master_image_checklistsPayload<ExtArgs>, T, "findFirstOrThrow", ClientOptions>, never, ExtArgs, ClientOptions>
+
+    /**
+     * Find zero or more Master_image_checklists that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {master_image_checklistsFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all Master_image_checklists
+     * const master_image_checklists = await prisma.master_image_checklists.findMany()
+     * 
+     * // Get first 10 Master_image_checklists
+     * const master_image_checklists = await prisma.master_image_checklists.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const master_image_checklistsWithIdOnly = await prisma.master_image_checklists.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends master_image_checklistsFindManyArgs>(args?: SelectSubset<T, master_image_checklistsFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$master_image_checklistsPayload<ExtArgs>, T, "findMany", ClientOptions>>
+
+    /**
+     * Create a Master_image_checklists.
+     * @param {master_image_checklistsCreateArgs} args - Arguments to create a Master_image_checklists.
+     * @example
+     * // Create one Master_image_checklists
+     * const Master_image_checklists = await prisma.master_image_checklists.create({
+     *   data: {
+     *     // ... data to create a Master_image_checklists
+     *   }
+     * })
+     * 
+     */
+    create<T extends master_image_checklistsCreateArgs>(args: SelectSubset<T, master_image_checklistsCreateArgs<ExtArgs>>): Prisma__master_image_checklistsClient<$Result.GetResult<Prisma.$master_image_checklistsPayload<ExtArgs>, T, "create", ClientOptions>, never, ExtArgs, ClientOptions>
+
+    /**
+     * Create many Master_image_checklists.
+     * @param {master_image_checklistsCreateManyArgs} args - Arguments to create many Master_image_checklists.
+     * @example
+     * // Create many Master_image_checklists
+     * const master_image_checklists = await prisma.master_image_checklists.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends master_image_checklistsCreateManyArgs>(args?: SelectSubset<T, master_image_checklistsCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Delete a Master_image_checklists.
+     * @param {master_image_checklistsDeleteArgs} args - Arguments to delete one Master_image_checklists.
+     * @example
+     * // Delete one Master_image_checklists
+     * const Master_image_checklists = await prisma.master_image_checklists.delete({
+     *   where: {
+     *     // ... filter to delete one Master_image_checklists
+     *   }
+     * })
+     * 
+     */
+    delete<T extends master_image_checklistsDeleteArgs>(args: SelectSubset<T, master_image_checklistsDeleteArgs<ExtArgs>>): Prisma__master_image_checklistsClient<$Result.GetResult<Prisma.$master_image_checklistsPayload<ExtArgs>, T, "delete", ClientOptions>, never, ExtArgs, ClientOptions>
+
+    /**
+     * Update one Master_image_checklists.
+     * @param {master_image_checklistsUpdateArgs} args - Arguments to update one Master_image_checklists.
+     * @example
+     * // Update one Master_image_checklists
+     * const master_image_checklists = await prisma.master_image_checklists.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends master_image_checklistsUpdateArgs>(args: SelectSubset<T, master_image_checklistsUpdateArgs<ExtArgs>>): Prisma__master_image_checklistsClient<$Result.GetResult<Prisma.$master_image_checklistsPayload<ExtArgs>, T, "update", ClientOptions>, never, ExtArgs, ClientOptions>
+
+    /**
+     * Delete zero or more Master_image_checklists.
+     * @param {master_image_checklistsDeleteManyArgs} args - Arguments to filter Master_image_checklists to delete.
+     * @example
+     * // Delete a few Master_image_checklists
+     * const { count } = await prisma.master_image_checklists.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends master_image_checklistsDeleteManyArgs>(args?: SelectSubset<T, master_image_checklistsDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more Master_image_checklists.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {master_image_checklistsUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many Master_image_checklists
+     * const master_image_checklists = await prisma.master_image_checklists.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends master_image_checklistsUpdateManyArgs>(args: SelectSubset<T, master_image_checklistsUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create or update one Master_image_checklists.
+     * @param {master_image_checklistsUpsertArgs} args - Arguments to update or create a Master_image_checklists.
+     * @example
+     * // Update or create a Master_image_checklists
+     * const master_image_checklists = await prisma.master_image_checklists.upsert({
+     *   create: {
+     *     // ... data to create a Master_image_checklists
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the Master_image_checklists we want to update
+     *   }
+     * })
+     */
+    upsert<T extends master_image_checklistsUpsertArgs>(args: SelectSubset<T, master_image_checklistsUpsertArgs<ExtArgs>>): Prisma__master_image_checklistsClient<$Result.GetResult<Prisma.$master_image_checklistsPayload<ExtArgs>, T, "upsert", ClientOptions>, never, ExtArgs, ClientOptions>
+
+
+    /**
+     * Count the number of Master_image_checklists.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {master_image_checklistsCountArgs} args - Arguments to filter Master_image_checklists to count.
+     * @example
+     * // Count the number of Master_image_checklists
+     * const count = await prisma.master_image_checklists.count({
+     *   where: {
+     *     // ... the filter for the Master_image_checklists we want to count
+     *   }
+     * })
+    **/
+    count<T extends master_image_checklistsCountArgs>(
+      args?: Subset<T, master_image_checklistsCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], Master_image_checklistsCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a Master_image_checklists.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {Master_image_checklistsAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends Master_image_checklistsAggregateArgs>(args: Subset<T, Master_image_checklistsAggregateArgs>): Prisma.PrismaPromise<GetMaster_image_checklistsAggregateType<T>>
+
+    /**
+     * Group by Master_image_checklists.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {master_image_checklistsGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends master_image_checklistsGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: master_image_checklistsGroupByArgs['orderBy'] }
+        : { orderBy?: master_image_checklistsGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, master_image_checklistsGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetMaster_image_checklistsGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the master_image_checklists model
+   */
+  readonly fields: master_image_checklistsFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for master_image_checklists.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__master_image_checklistsClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, ClientOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the master_image_checklists model
+   */ 
+  interface master_image_checklistsFieldRefs {
+    readonly id: FieldRef<"master_image_checklists", 'String'>
+    readonly checklist_detail_id: FieldRef<"master_image_checklists", 'String'>
+    readonly filename: FieldRef<"master_image_checklists", 'String'>
+    readonly updated_by: FieldRef<"master_image_checklists", 'String'>
+    readonly created_by: FieldRef<"master_image_checklists", 'String'>
+    readonly updated_at: FieldRef<"master_image_checklists", 'DateTime'>
+    readonly created_at: FieldRef<"master_image_checklists", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * master_image_checklists findUnique
+   */
+  export type master_image_checklistsFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the master_image_checklists
+     */
+    select?: master_image_checklistsSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the master_image_checklists
+     */
+    omit?: master_image_checklistsOmit<ExtArgs> | null
+    /**
+     * Filter, which master_image_checklists to fetch.
+     */
+    where: master_image_checklistsWhereUniqueInput
+  }
+
+  /**
+   * master_image_checklists findUniqueOrThrow
+   */
+  export type master_image_checklistsFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the master_image_checklists
+     */
+    select?: master_image_checklistsSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the master_image_checklists
+     */
+    omit?: master_image_checklistsOmit<ExtArgs> | null
+    /**
+     * Filter, which master_image_checklists to fetch.
+     */
+    where: master_image_checklistsWhereUniqueInput
+  }
+
+  /**
+   * master_image_checklists findFirst
+   */
+  export type master_image_checklistsFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the master_image_checklists
+     */
+    select?: master_image_checklistsSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the master_image_checklists
+     */
+    omit?: master_image_checklistsOmit<ExtArgs> | null
+    /**
+     * Filter, which master_image_checklists to fetch.
+     */
+    where?: master_image_checklistsWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of master_image_checklists to fetch.
+     */
+    orderBy?: master_image_checklistsOrderByWithRelationInput | master_image_checklistsOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for master_image_checklists.
+     */
+    cursor?: master_image_checklistsWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` master_image_checklists from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` master_image_checklists.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of master_image_checklists.
+     */
+    distinct?: Master_image_checklistsScalarFieldEnum | Master_image_checklistsScalarFieldEnum[]
+  }
+
+  /**
+   * master_image_checklists findFirstOrThrow
+   */
+  export type master_image_checklistsFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the master_image_checklists
+     */
+    select?: master_image_checklistsSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the master_image_checklists
+     */
+    omit?: master_image_checklistsOmit<ExtArgs> | null
+    /**
+     * Filter, which master_image_checklists to fetch.
+     */
+    where?: master_image_checklistsWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of master_image_checklists to fetch.
+     */
+    orderBy?: master_image_checklistsOrderByWithRelationInput | master_image_checklistsOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for master_image_checklists.
+     */
+    cursor?: master_image_checklistsWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` master_image_checklists from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` master_image_checklists.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of master_image_checklists.
+     */
+    distinct?: Master_image_checklistsScalarFieldEnum | Master_image_checklistsScalarFieldEnum[]
+  }
+
+  /**
+   * master_image_checklists findMany
+   */
+  export type master_image_checklistsFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the master_image_checklists
+     */
+    select?: master_image_checklistsSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the master_image_checklists
+     */
+    omit?: master_image_checklistsOmit<ExtArgs> | null
+    /**
+     * Filter, which master_image_checklists to fetch.
+     */
+    where?: master_image_checklistsWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of master_image_checklists to fetch.
+     */
+    orderBy?: master_image_checklistsOrderByWithRelationInput | master_image_checklistsOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing master_image_checklists.
+     */
+    cursor?: master_image_checklistsWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` master_image_checklists from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` master_image_checklists.
+     */
+    skip?: number
+    distinct?: Master_image_checklistsScalarFieldEnum | Master_image_checklistsScalarFieldEnum[]
+  }
+
+  /**
+   * master_image_checklists create
+   */
+  export type master_image_checklistsCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the master_image_checklists
+     */
+    select?: master_image_checklistsSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the master_image_checklists
+     */
+    omit?: master_image_checklistsOmit<ExtArgs> | null
+    /**
+     * The data needed to create a master_image_checklists.
+     */
+    data: XOR<master_image_checklistsCreateInput, master_image_checklistsUncheckedCreateInput>
+  }
+
+  /**
+   * master_image_checklists createMany
+   */
+  export type master_image_checklistsCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many master_image_checklists.
+     */
+    data: master_image_checklistsCreateManyInput | master_image_checklistsCreateManyInput[]
+  }
+
+  /**
+   * master_image_checklists update
+   */
+  export type master_image_checklistsUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the master_image_checklists
+     */
+    select?: master_image_checklistsSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the master_image_checklists
+     */
+    omit?: master_image_checklistsOmit<ExtArgs> | null
+    /**
+     * The data needed to update a master_image_checklists.
+     */
+    data: XOR<master_image_checklistsUpdateInput, master_image_checklistsUncheckedUpdateInput>
+    /**
+     * Choose, which master_image_checklists to update.
+     */
+    where: master_image_checklistsWhereUniqueInput
+  }
+
+  /**
+   * master_image_checklists updateMany
+   */
+  export type master_image_checklistsUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update master_image_checklists.
+     */
+    data: XOR<master_image_checklistsUpdateManyMutationInput, master_image_checklistsUncheckedUpdateManyInput>
+    /**
+     * Filter which master_image_checklists to update
+     */
+    where?: master_image_checklistsWhereInput
+    /**
+     * Limit how many master_image_checklists to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * master_image_checklists upsert
+   */
+  export type master_image_checklistsUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the master_image_checklists
+     */
+    select?: master_image_checklistsSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the master_image_checklists
+     */
+    omit?: master_image_checklistsOmit<ExtArgs> | null
+    /**
+     * The filter to search for the master_image_checklists to update in case it exists.
+     */
+    where: master_image_checklistsWhereUniqueInput
+    /**
+     * In case the master_image_checklists found by the `where` argument doesn't exist, create a new master_image_checklists with this data.
+     */
+    create: XOR<master_image_checklistsCreateInput, master_image_checklistsUncheckedCreateInput>
+    /**
+     * In case the master_image_checklists was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<master_image_checklistsUpdateInput, master_image_checklistsUncheckedUpdateInput>
+  }
+
+  /**
+   * master_image_checklists delete
+   */
+  export type master_image_checklistsDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the master_image_checklists
+     */
+    select?: master_image_checklistsSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the master_image_checklists
+     */
+    omit?: master_image_checklistsOmit<ExtArgs> | null
+    /**
+     * Filter which master_image_checklists to delete.
+     */
+    where: master_image_checklistsWhereUniqueInput
+  }
+
+  /**
+   * master_image_checklists deleteMany
+   */
+  export type master_image_checklistsDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which master_image_checklists to delete
+     */
+    where?: master_image_checklistsWhereInput
+    /**
+     * Limit how many master_image_checklists to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * master_image_checklists without action
+   */
+  export type master_image_checklistsDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the master_image_checklists
+     */
+    select?: master_image_checklistsSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the master_image_checklists
+     */
+    omit?: master_image_checklistsOmit<ExtArgs> | null
+  }
+
+
+  /**
+   * Model order_checklists
+   */
+
+  export type AggregateOrder_checklists = {
+    _count: Order_checklistsCountAggregateOutputType | null
+    _min: Order_checklistsMinAggregateOutputType | null
+    _max: Order_checklistsMaxAggregateOutputType | null
+  }
+
+  export type Order_checklistsMinAggregateOutputType = {
+    id: string | null
+    checklist_id: string | null
+    order_id: string | null
+    model: string | null
+    workcenter: string | null
+    status: boolean | null
+    date_open: Date | null
+    date_closed: Date | null
+    updated_by: string | null
+    created_by: string | null
+    updated_at: Date | null
+    created_at: Date | null
+  }
+
+  export type Order_checklistsMaxAggregateOutputType = {
+    id: string | null
+    checklist_id: string | null
+    order_id: string | null
+    model: string | null
+    workcenter: string | null
+    status: boolean | null
+    date_open: Date | null
+    date_closed: Date | null
+    updated_by: string | null
+    created_by: string | null
+    updated_at: Date | null
+    created_at: Date | null
+  }
+
+  export type Order_checklistsCountAggregateOutputType = {
+    id: number
+    checklist_id: number
+    order_id: number
+    model: number
+    workcenter: number
+    status: number
+    date_open: number
+    date_closed: number
+    updated_by: number
+    created_by: number
+    updated_at: number
+    created_at: number
+    _all: number
+  }
+
+
+  export type Order_checklistsMinAggregateInputType = {
+    id?: true
+    checklist_id?: true
+    order_id?: true
+    model?: true
+    workcenter?: true
+    status?: true
+    date_open?: true
+    date_closed?: true
+    updated_by?: true
+    created_by?: true
+    updated_at?: true
+    created_at?: true
+  }
+
+  export type Order_checklistsMaxAggregateInputType = {
+    id?: true
+    checklist_id?: true
+    order_id?: true
+    model?: true
+    workcenter?: true
+    status?: true
+    date_open?: true
+    date_closed?: true
+    updated_by?: true
+    created_by?: true
+    updated_at?: true
+    created_at?: true
+  }
+
+  export type Order_checklistsCountAggregateInputType = {
+    id?: true
+    checklist_id?: true
+    order_id?: true
+    model?: true
+    workcenter?: true
+    status?: true
+    date_open?: true
+    date_closed?: true
+    updated_by?: true
+    created_by?: true
+    updated_at?: true
+    created_at?: true
+    _all?: true
+  }
+
+  export type Order_checklistsAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which order_checklists to aggregate.
+     */
+    where?: order_checklistsWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of order_checklists to fetch.
+     */
+    orderBy?: order_checklistsOrderByWithRelationInput | order_checklistsOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: order_checklistsWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` order_checklists from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` order_checklists.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned order_checklists
+    **/
+    _count?: true | Order_checklistsCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: Order_checklistsMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: Order_checklistsMaxAggregateInputType
+  }
+
+  export type GetOrder_checklistsAggregateType<T extends Order_checklistsAggregateArgs> = {
+        [P in keyof T & keyof AggregateOrder_checklists]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateOrder_checklists[P]>
+      : GetScalarType<T[P], AggregateOrder_checklists[P]>
+  }
+
+
+
+
+  export type order_checklistsGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: order_checklistsWhereInput
+    orderBy?: order_checklistsOrderByWithAggregationInput | order_checklistsOrderByWithAggregationInput[]
+    by: Order_checklistsScalarFieldEnum[] | Order_checklistsScalarFieldEnum
+    having?: order_checklistsScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: Order_checklistsCountAggregateInputType | true
+    _min?: Order_checklistsMinAggregateInputType
+    _max?: Order_checklistsMaxAggregateInputType
+  }
+
+  export type Order_checklistsGroupByOutputType = {
+    id: string
+    checklist_id: string
+    order_id: string
+    model: string
+    workcenter: string
+    status: boolean
+    date_open: Date | null
+    date_closed: Date | null
+    updated_by: string
+    created_by: string
+    updated_at: Date | null
+    created_at: Date | null
+    _count: Order_checklistsCountAggregateOutputType | null
+    _min: Order_checklistsMinAggregateOutputType | null
+    _max: Order_checklistsMaxAggregateOutputType | null
+  }
+
+  type GetOrder_checklistsGroupByPayload<T extends order_checklistsGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<Order_checklistsGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof Order_checklistsGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], Order_checklistsGroupByOutputType[P]>
+            : GetScalarType<T[P], Order_checklistsGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type order_checklistsSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    checklist_id?: boolean
+    order_id?: boolean
+    model?: boolean
+    workcenter?: boolean
+    status?: boolean
+    date_open?: boolean
+    date_closed?: boolean
+    updated_by?: boolean
+    created_by?: boolean
+    updated_at?: boolean
+    created_at?: boolean
+  }, ExtArgs["result"]["order_checklists"]>
+
+
+
+  export type order_checklistsSelectScalar = {
+    id?: boolean
+    checklist_id?: boolean
+    order_id?: boolean
+    model?: boolean
+    workcenter?: boolean
+    status?: boolean
+    date_open?: boolean
+    date_closed?: boolean
+    updated_by?: boolean
+    created_by?: boolean
+    updated_at?: boolean
+    created_at?: boolean
+  }
+
+  export type order_checklistsOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "checklist_id" | "order_id" | "model" | "workcenter" | "status" | "date_open" | "date_closed" | "updated_by" | "created_by" | "updated_at" | "created_at", ExtArgs["result"]["order_checklists"]>
+
+  export type $order_checklistsPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "order_checklists"
+    objects: {}
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      checklist_id: string
+      order_id: string
+      model: string
+      workcenter: string
+      status: boolean
+      date_open: Date | null
+      date_closed: Date | null
+      updated_by: string
+      created_by: string
+      updated_at: Date | null
+      created_at: Date | null
+    }, ExtArgs["result"]["order_checklists"]>
+    composites: {}
+  }
+
+  type order_checklistsGetPayload<S extends boolean | null | undefined | order_checklistsDefaultArgs> = $Result.GetResult<Prisma.$order_checklistsPayload, S>
+
+  type order_checklistsCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<order_checklistsFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: Order_checklistsCountAggregateInputType | true
+    }
+
+  export interface order_checklistsDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, ClientOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['order_checklists'], meta: { name: 'order_checklists' } }
+    /**
+     * Find zero or one Order_checklists that matches the filter.
+     * @param {order_checklistsFindUniqueArgs} args - Arguments to find a Order_checklists
+     * @example
+     * // Get one Order_checklists
+     * const order_checklists = await prisma.order_checklists.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends order_checklistsFindUniqueArgs>(args: SelectSubset<T, order_checklistsFindUniqueArgs<ExtArgs>>): Prisma__order_checklistsClient<$Result.GetResult<Prisma.$order_checklistsPayload<ExtArgs>, T, "findUnique", ClientOptions> | null, null, ExtArgs, ClientOptions>
+
+    /**
+     * Find one Order_checklists that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {order_checklistsFindUniqueOrThrowArgs} args - Arguments to find a Order_checklists
+     * @example
+     * // Get one Order_checklists
+     * const order_checklists = await prisma.order_checklists.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends order_checklistsFindUniqueOrThrowArgs>(args: SelectSubset<T, order_checklistsFindUniqueOrThrowArgs<ExtArgs>>): Prisma__order_checklistsClient<$Result.GetResult<Prisma.$order_checklistsPayload<ExtArgs>, T, "findUniqueOrThrow", ClientOptions>, never, ExtArgs, ClientOptions>
+
+    /**
+     * Find the first Order_checklists that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {order_checklistsFindFirstArgs} args - Arguments to find a Order_checklists
+     * @example
+     * // Get one Order_checklists
+     * const order_checklists = await prisma.order_checklists.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends order_checklistsFindFirstArgs>(args?: SelectSubset<T, order_checklistsFindFirstArgs<ExtArgs>>): Prisma__order_checklistsClient<$Result.GetResult<Prisma.$order_checklistsPayload<ExtArgs>, T, "findFirst", ClientOptions> | null, null, ExtArgs, ClientOptions>
+
+    /**
+     * Find the first Order_checklists that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {order_checklistsFindFirstOrThrowArgs} args - Arguments to find a Order_checklists
+     * @example
+     * // Get one Order_checklists
+     * const order_checklists = await prisma.order_checklists.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends order_checklistsFindFirstOrThrowArgs>(args?: SelectSubset<T, order_checklistsFindFirstOrThrowArgs<ExtArgs>>): Prisma__order_checklistsClient<$Result.GetResult<Prisma.$order_checklistsPayload<ExtArgs>, T, "findFirstOrThrow", ClientOptions>, never, ExtArgs, ClientOptions>
+
+    /**
+     * Find zero or more Order_checklists that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {order_checklistsFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all Order_checklists
+     * const order_checklists = await prisma.order_checklists.findMany()
+     * 
+     * // Get first 10 Order_checklists
+     * const order_checklists = await prisma.order_checklists.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const order_checklistsWithIdOnly = await prisma.order_checklists.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends order_checklistsFindManyArgs>(args?: SelectSubset<T, order_checklistsFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$order_checklistsPayload<ExtArgs>, T, "findMany", ClientOptions>>
+
+    /**
+     * Create a Order_checklists.
+     * @param {order_checklistsCreateArgs} args - Arguments to create a Order_checklists.
+     * @example
+     * // Create one Order_checklists
+     * const Order_checklists = await prisma.order_checklists.create({
+     *   data: {
+     *     // ... data to create a Order_checklists
+     *   }
+     * })
+     * 
+     */
+    create<T extends order_checklistsCreateArgs>(args: SelectSubset<T, order_checklistsCreateArgs<ExtArgs>>): Prisma__order_checklistsClient<$Result.GetResult<Prisma.$order_checklistsPayload<ExtArgs>, T, "create", ClientOptions>, never, ExtArgs, ClientOptions>
+
+    /**
+     * Create many Order_checklists.
+     * @param {order_checklistsCreateManyArgs} args - Arguments to create many Order_checklists.
+     * @example
+     * // Create many Order_checklists
+     * const order_checklists = await prisma.order_checklists.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends order_checklistsCreateManyArgs>(args?: SelectSubset<T, order_checklistsCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Delete a Order_checklists.
+     * @param {order_checklistsDeleteArgs} args - Arguments to delete one Order_checklists.
+     * @example
+     * // Delete one Order_checklists
+     * const Order_checklists = await prisma.order_checklists.delete({
+     *   where: {
+     *     // ... filter to delete one Order_checklists
+     *   }
+     * })
+     * 
+     */
+    delete<T extends order_checklistsDeleteArgs>(args: SelectSubset<T, order_checklistsDeleteArgs<ExtArgs>>): Prisma__order_checklistsClient<$Result.GetResult<Prisma.$order_checklistsPayload<ExtArgs>, T, "delete", ClientOptions>, never, ExtArgs, ClientOptions>
+
+    /**
+     * Update one Order_checklists.
+     * @param {order_checklistsUpdateArgs} args - Arguments to update one Order_checklists.
+     * @example
+     * // Update one Order_checklists
+     * const order_checklists = await prisma.order_checklists.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends order_checklistsUpdateArgs>(args: SelectSubset<T, order_checklistsUpdateArgs<ExtArgs>>): Prisma__order_checklistsClient<$Result.GetResult<Prisma.$order_checklistsPayload<ExtArgs>, T, "update", ClientOptions>, never, ExtArgs, ClientOptions>
+
+    /**
+     * Delete zero or more Order_checklists.
+     * @param {order_checklistsDeleteManyArgs} args - Arguments to filter Order_checklists to delete.
+     * @example
+     * // Delete a few Order_checklists
+     * const { count } = await prisma.order_checklists.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends order_checklistsDeleteManyArgs>(args?: SelectSubset<T, order_checklistsDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more Order_checklists.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {order_checklistsUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many Order_checklists
+     * const order_checklists = await prisma.order_checklists.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends order_checklistsUpdateManyArgs>(args: SelectSubset<T, order_checklistsUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create or update one Order_checklists.
+     * @param {order_checklistsUpsertArgs} args - Arguments to update or create a Order_checklists.
+     * @example
+     * // Update or create a Order_checklists
+     * const order_checklists = await prisma.order_checklists.upsert({
+     *   create: {
+     *     // ... data to create a Order_checklists
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the Order_checklists we want to update
+     *   }
+     * })
+     */
+    upsert<T extends order_checklistsUpsertArgs>(args: SelectSubset<T, order_checklistsUpsertArgs<ExtArgs>>): Prisma__order_checklistsClient<$Result.GetResult<Prisma.$order_checklistsPayload<ExtArgs>, T, "upsert", ClientOptions>, never, ExtArgs, ClientOptions>
+
+
+    /**
+     * Count the number of Order_checklists.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {order_checklistsCountArgs} args - Arguments to filter Order_checklists to count.
+     * @example
+     * // Count the number of Order_checklists
+     * const count = await prisma.order_checklists.count({
+     *   where: {
+     *     // ... the filter for the Order_checklists we want to count
+     *   }
+     * })
+    **/
+    count<T extends order_checklistsCountArgs>(
+      args?: Subset<T, order_checklistsCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], Order_checklistsCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a Order_checklists.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {Order_checklistsAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends Order_checklistsAggregateArgs>(args: Subset<T, Order_checklistsAggregateArgs>): Prisma.PrismaPromise<GetOrder_checklistsAggregateType<T>>
+
+    /**
+     * Group by Order_checklists.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {order_checklistsGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends order_checklistsGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: order_checklistsGroupByArgs['orderBy'] }
+        : { orderBy?: order_checklistsGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, order_checklistsGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetOrder_checklistsGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the order_checklists model
+   */
+  readonly fields: order_checklistsFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for order_checklists.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__order_checklistsClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, ClientOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the order_checklists model
+   */ 
+  interface order_checklistsFieldRefs {
+    readonly id: FieldRef<"order_checklists", 'String'>
+    readonly checklist_id: FieldRef<"order_checklists", 'String'>
+    readonly order_id: FieldRef<"order_checklists", 'String'>
+    readonly model: FieldRef<"order_checklists", 'String'>
+    readonly workcenter: FieldRef<"order_checklists", 'String'>
+    readonly status: FieldRef<"order_checklists", 'Boolean'>
+    readonly date_open: FieldRef<"order_checklists", 'DateTime'>
+    readonly date_closed: FieldRef<"order_checklists", 'DateTime'>
+    readonly updated_by: FieldRef<"order_checklists", 'String'>
+    readonly created_by: FieldRef<"order_checklists", 'String'>
+    readonly updated_at: FieldRef<"order_checklists", 'DateTime'>
+    readonly created_at: FieldRef<"order_checklists", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * order_checklists findUnique
+   */
+  export type order_checklistsFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the order_checklists
+     */
+    select?: order_checklistsSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the order_checklists
+     */
+    omit?: order_checklistsOmit<ExtArgs> | null
+    /**
+     * Filter, which order_checklists to fetch.
+     */
+    where: order_checklistsWhereUniqueInput
+  }
+
+  /**
+   * order_checklists findUniqueOrThrow
+   */
+  export type order_checklistsFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the order_checklists
+     */
+    select?: order_checklistsSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the order_checklists
+     */
+    omit?: order_checklistsOmit<ExtArgs> | null
+    /**
+     * Filter, which order_checklists to fetch.
+     */
+    where: order_checklistsWhereUniqueInput
+  }
+
+  /**
+   * order_checklists findFirst
+   */
+  export type order_checklistsFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the order_checklists
+     */
+    select?: order_checklistsSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the order_checklists
+     */
+    omit?: order_checklistsOmit<ExtArgs> | null
+    /**
+     * Filter, which order_checklists to fetch.
+     */
+    where?: order_checklistsWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of order_checklists to fetch.
+     */
+    orderBy?: order_checklistsOrderByWithRelationInput | order_checklistsOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for order_checklists.
+     */
+    cursor?: order_checklistsWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` order_checklists from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` order_checklists.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of order_checklists.
+     */
+    distinct?: Order_checklistsScalarFieldEnum | Order_checklistsScalarFieldEnum[]
+  }
+
+  /**
+   * order_checklists findFirstOrThrow
+   */
+  export type order_checklistsFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the order_checklists
+     */
+    select?: order_checklistsSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the order_checklists
+     */
+    omit?: order_checklistsOmit<ExtArgs> | null
+    /**
+     * Filter, which order_checklists to fetch.
+     */
+    where?: order_checklistsWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of order_checklists to fetch.
+     */
+    orderBy?: order_checklistsOrderByWithRelationInput | order_checklistsOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for order_checklists.
+     */
+    cursor?: order_checklistsWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` order_checklists from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` order_checklists.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of order_checklists.
+     */
+    distinct?: Order_checklistsScalarFieldEnum | Order_checklistsScalarFieldEnum[]
+  }
+
+  /**
+   * order_checklists findMany
+   */
+  export type order_checklistsFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the order_checklists
+     */
+    select?: order_checklistsSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the order_checklists
+     */
+    omit?: order_checklistsOmit<ExtArgs> | null
+    /**
+     * Filter, which order_checklists to fetch.
+     */
+    where?: order_checklistsWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of order_checklists to fetch.
+     */
+    orderBy?: order_checklistsOrderByWithRelationInput | order_checklistsOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing order_checklists.
+     */
+    cursor?: order_checklistsWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` order_checklists from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` order_checklists.
+     */
+    skip?: number
+    distinct?: Order_checklistsScalarFieldEnum | Order_checklistsScalarFieldEnum[]
+  }
+
+  /**
+   * order_checklists create
+   */
+  export type order_checklistsCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the order_checklists
+     */
+    select?: order_checklistsSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the order_checklists
+     */
+    omit?: order_checklistsOmit<ExtArgs> | null
+    /**
+     * The data needed to create a order_checklists.
+     */
+    data: XOR<order_checklistsCreateInput, order_checklistsUncheckedCreateInput>
+  }
+
+  /**
+   * order_checklists createMany
+   */
+  export type order_checklistsCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many order_checklists.
+     */
+    data: order_checklistsCreateManyInput | order_checklistsCreateManyInput[]
+  }
+
+  /**
+   * order_checklists update
+   */
+  export type order_checklistsUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the order_checklists
+     */
+    select?: order_checklistsSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the order_checklists
+     */
+    omit?: order_checklistsOmit<ExtArgs> | null
+    /**
+     * The data needed to update a order_checklists.
+     */
+    data: XOR<order_checklistsUpdateInput, order_checklistsUncheckedUpdateInput>
+    /**
+     * Choose, which order_checklists to update.
+     */
+    where: order_checklistsWhereUniqueInput
+  }
+
+  /**
+   * order_checklists updateMany
+   */
+  export type order_checklistsUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update order_checklists.
+     */
+    data: XOR<order_checklistsUpdateManyMutationInput, order_checklistsUncheckedUpdateManyInput>
+    /**
+     * Filter which order_checklists to update
+     */
+    where?: order_checklistsWhereInput
+    /**
+     * Limit how many order_checklists to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * order_checklists upsert
+   */
+  export type order_checklistsUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the order_checklists
+     */
+    select?: order_checklistsSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the order_checklists
+     */
+    omit?: order_checklistsOmit<ExtArgs> | null
+    /**
+     * The filter to search for the order_checklists to update in case it exists.
+     */
+    where: order_checklistsWhereUniqueInput
+    /**
+     * In case the order_checklists found by the `where` argument doesn't exist, create a new order_checklists with this data.
+     */
+    create: XOR<order_checklistsCreateInput, order_checklistsUncheckedCreateInput>
+    /**
+     * In case the order_checklists was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<order_checklistsUpdateInput, order_checklistsUncheckedUpdateInput>
+  }
+
+  /**
+   * order_checklists delete
+   */
+  export type order_checklistsDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the order_checklists
+     */
+    select?: order_checklistsSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the order_checklists
+     */
+    omit?: order_checklistsOmit<ExtArgs> | null
+    /**
+     * Filter which order_checklists to delete.
+     */
+    where: order_checklistsWhereUniqueInput
+  }
+
+  /**
+   * order_checklists deleteMany
+   */
+  export type order_checklistsDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which order_checklists to delete
+     */
+    where?: order_checklistsWhereInput
+    /**
+     * Limit how many order_checklists to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * order_checklists without action
+   */
+  export type order_checklistsDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the order_checklists
+     */
+    select?: order_checklistsSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the order_checklists
+     */
+    omit?: order_checklistsOmit<ExtArgs> | null
+  }
+
+
+  /**
+   * Model order_checklist_details
+   */
+
+  export type AggregateOrder_checklist_details = {
+    _count: Order_checklist_detailsCountAggregateOutputType | null
+    _min: Order_checklist_detailsMinAggregateOutputType | null
+    _max: Order_checklist_detailsMaxAggregateOutputType | null
+  }
+
+  export type Order_checklist_detailsMinAggregateOutputType = {
+    id: string | null
+    order_checklist_id: string | null
+    checked: boolean | null
+    notes_by_prod: string | null
+    notes_by_qc: string | null
+    updated_by: string | null
+    created_by: string | null
+    updated_at: Date | null
+    created_at: Date | null
+  }
+
+  export type Order_checklist_detailsMaxAggregateOutputType = {
+    id: string | null
+    order_checklist_id: string | null
+    checked: boolean | null
+    notes_by_prod: string | null
+    notes_by_qc: string | null
+    updated_by: string | null
+    created_by: string | null
+    updated_at: Date | null
+    created_at: Date | null
+  }
+
+  export type Order_checklist_detailsCountAggregateOutputType = {
+    id: number
+    order_checklist_id: number
+    checked: number
+    notes_by_prod: number
+    notes_by_qc: number
+    updated_by: number
+    created_by: number
+    updated_at: number
+    created_at: number
+    _all: number
+  }
+
+
+  export type Order_checklist_detailsMinAggregateInputType = {
+    id?: true
+    order_checklist_id?: true
+    checked?: true
+    notes_by_prod?: true
+    notes_by_qc?: true
+    updated_by?: true
+    created_by?: true
+    updated_at?: true
+    created_at?: true
+  }
+
+  export type Order_checklist_detailsMaxAggregateInputType = {
+    id?: true
+    order_checklist_id?: true
+    checked?: true
+    notes_by_prod?: true
+    notes_by_qc?: true
+    updated_by?: true
+    created_by?: true
+    updated_at?: true
+    created_at?: true
+  }
+
+  export type Order_checklist_detailsCountAggregateInputType = {
+    id?: true
+    order_checklist_id?: true
+    checked?: true
+    notes_by_prod?: true
+    notes_by_qc?: true
+    updated_by?: true
+    created_by?: true
+    updated_at?: true
+    created_at?: true
+    _all?: true
+  }
+
+  export type Order_checklist_detailsAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which order_checklist_details to aggregate.
+     */
+    where?: order_checklist_detailsWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of order_checklist_details to fetch.
+     */
+    orderBy?: order_checklist_detailsOrderByWithRelationInput | order_checklist_detailsOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: order_checklist_detailsWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` order_checklist_details from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` order_checklist_details.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned order_checklist_details
+    **/
+    _count?: true | Order_checklist_detailsCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: Order_checklist_detailsMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: Order_checklist_detailsMaxAggregateInputType
+  }
+
+  export type GetOrder_checklist_detailsAggregateType<T extends Order_checklist_detailsAggregateArgs> = {
+        [P in keyof T & keyof AggregateOrder_checklist_details]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateOrder_checklist_details[P]>
+      : GetScalarType<T[P], AggregateOrder_checklist_details[P]>
+  }
+
+
+
+
+  export type order_checklist_detailsGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: order_checklist_detailsWhereInput
+    orderBy?: order_checklist_detailsOrderByWithAggregationInput | order_checklist_detailsOrderByWithAggregationInput[]
+    by: Order_checklist_detailsScalarFieldEnum[] | Order_checklist_detailsScalarFieldEnum
+    having?: order_checklist_detailsScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: Order_checklist_detailsCountAggregateInputType | true
+    _min?: Order_checklist_detailsMinAggregateInputType
+    _max?: Order_checklist_detailsMaxAggregateInputType
+  }
+
+  export type Order_checklist_detailsGroupByOutputType = {
+    id: string
+    order_checklist_id: string
+    checked: boolean
+    notes_by_prod: string
+    notes_by_qc: string
+    updated_by: string
+    created_by: string
+    updated_at: Date | null
+    created_at: Date | null
+    _count: Order_checklist_detailsCountAggregateOutputType | null
+    _min: Order_checklist_detailsMinAggregateOutputType | null
+    _max: Order_checklist_detailsMaxAggregateOutputType | null
+  }
+
+  type GetOrder_checklist_detailsGroupByPayload<T extends order_checklist_detailsGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<Order_checklist_detailsGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof Order_checklist_detailsGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], Order_checklist_detailsGroupByOutputType[P]>
+            : GetScalarType<T[P], Order_checklist_detailsGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type order_checklist_detailsSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    order_checklist_id?: boolean
+    checked?: boolean
+    notes_by_prod?: boolean
+    notes_by_qc?: boolean
+    updated_by?: boolean
+    created_by?: boolean
+    updated_at?: boolean
+    created_at?: boolean
+  }, ExtArgs["result"]["order_checklist_details"]>
+
+
+
+  export type order_checklist_detailsSelectScalar = {
+    id?: boolean
+    order_checklist_id?: boolean
+    checked?: boolean
+    notes_by_prod?: boolean
+    notes_by_qc?: boolean
+    updated_by?: boolean
+    created_by?: boolean
+    updated_at?: boolean
+    created_at?: boolean
+  }
+
+  export type order_checklist_detailsOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "order_checklist_id" | "checked" | "notes_by_prod" | "notes_by_qc" | "updated_by" | "created_by" | "updated_at" | "created_at", ExtArgs["result"]["order_checklist_details"]>
+
+  export type $order_checklist_detailsPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "order_checklist_details"
+    objects: {}
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      order_checklist_id: string
+      checked: boolean
+      notes_by_prod: string
+      notes_by_qc: string
+      updated_by: string
+      created_by: string
+      updated_at: Date | null
+      created_at: Date | null
+    }, ExtArgs["result"]["order_checklist_details"]>
+    composites: {}
+  }
+
+  type order_checklist_detailsGetPayload<S extends boolean | null | undefined | order_checklist_detailsDefaultArgs> = $Result.GetResult<Prisma.$order_checklist_detailsPayload, S>
+
+  type order_checklist_detailsCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<order_checklist_detailsFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: Order_checklist_detailsCountAggregateInputType | true
+    }
+
+  export interface order_checklist_detailsDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, ClientOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['order_checklist_details'], meta: { name: 'order_checklist_details' } }
+    /**
+     * Find zero or one Order_checklist_details that matches the filter.
+     * @param {order_checklist_detailsFindUniqueArgs} args - Arguments to find a Order_checklist_details
+     * @example
+     * // Get one Order_checklist_details
+     * const order_checklist_details = await prisma.order_checklist_details.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends order_checklist_detailsFindUniqueArgs>(args: SelectSubset<T, order_checklist_detailsFindUniqueArgs<ExtArgs>>): Prisma__order_checklist_detailsClient<$Result.GetResult<Prisma.$order_checklist_detailsPayload<ExtArgs>, T, "findUnique", ClientOptions> | null, null, ExtArgs, ClientOptions>
+
+    /**
+     * Find one Order_checklist_details that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {order_checklist_detailsFindUniqueOrThrowArgs} args - Arguments to find a Order_checklist_details
+     * @example
+     * // Get one Order_checklist_details
+     * const order_checklist_details = await prisma.order_checklist_details.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends order_checklist_detailsFindUniqueOrThrowArgs>(args: SelectSubset<T, order_checklist_detailsFindUniqueOrThrowArgs<ExtArgs>>): Prisma__order_checklist_detailsClient<$Result.GetResult<Prisma.$order_checklist_detailsPayload<ExtArgs>, T, "findUniqueOrThrow", ClientOptions>, never, ExtArgs, ClientOptions>
+
+    /**
+     * Find the first Order_checklist_details that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {order_checklist_detailsFindFirstArgs} args - Arguments to find a Order_checklist_details
+     * @example
+     * // Get one Order_checklist_details
+     * const order_checklist_details = await prisma.order_checklist_details.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends order_checklist_detailsFindFirstArgs>(args?: SelectSubset<T, order_checklist_detailsFindFirstArgs<ExtArgs>>): Prisma__order_checklist_detailsClient<$Result.GetResult<Prisma.$order_checklist_detailsPayload<ExtArgs>, T, "findFirst", ClientOptions> | null, null, ExtArgs, ClientOptions>
+
+    /**
+     * Find the first Order_checklist_details that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {order_checklist_detailsFindFirstOrThrowArgs} args - Arguments to find a Order_checklist_details
+     * @example
+     * // Get one Order_checklist_details
+     * const order_checklist_details = await prisma.order_checklist_details.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends order_checklist_detailsFindFirstOrThrowArgs>(args?: SelectSubset<T, order_checklist_detailsFindFirstOrThrowArgs<ExtArgs>>): Prisma__order_checklist_detailsClient<$Result.GetResult<Prisma.$order_checklist_detailsPayload<ExtArgs>, T, "findFirstOrThrow", ClientOptions>, never, ExtArgs, ClientOptions>
+
+    /**
+     * Find zero or more Order_checklist_details that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {order_checklist_detailsFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all Order_checklist_details
+     * const order_checklist_details = await prisma.order_checklist_details.findMany()
+     * 
+     * // Get first 10 Order_checklist_details
+     * const order_checklist_details = await prisma.order_checklist_details.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const order_checklist_detailsWithIdOnly = await prisma.order_checklist_details.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends order_checklist_detailsFindManyArgs>(args?: SelectSubset<T, order_checklist_detailsFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$order_checklist_detailsPayload<ExtArgs>, T, "findMany", ClientOptions>>
+
+    /**
+     * Create a Order_checklist_details.
+     * @param {order_checklist_detailsCreateArgs} args - Arguments to create a Order_checklist_details.
+     * @example
+     * // Create one Order_checklist_details
+     * const Order_checklist_details = await prisma.order_checklist_details.create({
+     *   data: {
+     *     // ... data to create a Order_checklist_details
+     *   }
+     * })
+     * 
+     */
+    create<T extends order_checklist_detailsCreateArgs>(args: SelectSubset<T, order_checklist_detailsCreateArgs<ExtArgs>>): Prisma__order_checklist_detailsClient<$Result.GetResult<Prisma.$order_checklist_detailsPayload<ExtArgs>, T, "create", ClientOptions>, never, ExtArgs, ClientOptions>
+
+    /**
+     * Create many Order_checklist_details.
+     * @param {order_checklist_detailsCreateManyArgs} args - Arguments to create many Order_checklist_details.
+     * @example
+     * // Create many Order_checklist_details
+     * const order_checklist_details = await prisma.order_checklist_details.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends order_checklist_detailsCreateManyArgs>(args?: SelectSubset<T, order_checklist_detailsCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Delete a Order_checklist_details.
+     * @param {order_checklist_detailsDeleteArgs} args - Arguments to delete one Order_checklist_details.
+     * @example
+     * // Delete one Order_checklist_details
+     * const Order_checklist_details = await prisma.order_checklist_details.delete({
+     *   where: {
+     *     // ... filter to delete one Order_checklist_details
+     *   }
+     * })
+     * 
+     */
+    delete<T extends order_checklist_detailsDeleteArgs>(args: SelectSubset<T, order_checklist_detailsDeleteArgs<ExtArgs>>): Prisma__order_checklist_detailsClient<$Result.GetResult<Prisma.$order_checklist_detailsPayload<ExtArgs>, T, "delete", ClientOptions>, never, ExtArgs, ClientOptions>
+
+    /**
+     * Update one Order_checklist_details.
+     * @param {order_checklist_detailsUpdateArgs} args - Arguments to update one Order_checklist_details.
+     * @example
+     * // Update one Order_checklist_details
+     * const order_checklist_details = await prisma.order_checklist_details.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends order_checklist_detailsUpdateArgs>(args: SelectSubset<T, order_checklist_detailsUpdateArgs<ExtArgs>>): Prisma__order_checklist_detailsClient<$Result.GetResult<Prisma.$order_checklist_detailsPayload<ExtArgs>, T, "update", ClientOptions>, never, ExtArgs, ClientOptions>
+
+    /**
+     * Delete zero or more Order_checklist_details.
+     * @param {order_checklist_detailsDeleteManyArgs} args - Arguments to filter Order_checklist_details to delete.
+     * @example
+     * // Delete a few Order_checklist_details
+     * const { count } = await prisma.order_checklist_details.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends order_checklist_detailsDeleteManyArgs>(args?: SelectSubset<T, order_checklist_detailsDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more Order_checklist_details.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {order_checklist_detailsUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many Order_checklist_details
+     * const order_checklist_details = await prisma.order_checklist_details.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends order_checklist_detailsUpdateManyArgs>(args: SelectSubset<T, order_checklist_detailsUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create or update one Order_checklist_details.
+     * @param {order_checklist_detailsUpsertArgs} args - Arguments to update or create a Order_checklist_details.
+     * @example
+     * // Update or create a Order_checklist_details
+     * const order_checklist_details = await prisma.order_checklist_details.upsert({
+     *   create: {
+     *     // ... data to create a Order_checklist_details
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the Order_checklist_details we want to update
+     *   }
+     * })
+     */
+    upsert<T extends order_checklist_detailsUpsertArgs>(args: SelectSubset<T, order_checklist_detailsUpsertArgs<ExtArgs>>): Prisma__order_checklist_detailsClient<$Result.GetResult<Prisma.$order_checklist_detailsPayload<ExtArgs>, T, "upsert", ClientOptions>, never, ExtArgs, ClientOptions>
+
+
+    /**
+     * Count the number of Order_checklist_details.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {order_checklist_detailsCountArgs} args - Arguments to filter Order_checklist_details to count.
+     * @example
+     * // Count the number of Order_checklist_details
+     * const count = await prisma.order_checklist_details.count({
+     *   where: {
+     *     // ... the filter for the Order_checklist_details we want to count
+     *   }
+     * })
+    **/
+    count<T extends order_checklist_detailsCountArgs>(
+      args?: Subset<T, order_checklist_detailsCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], Order_checklist_detailsCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a Order_checklist_details.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {Order_checklist_detailsAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends Order_checklist_detailsAggregateArgs>(args: Subset<T, Order_checklist_detailsAggregateArgs>): Prisma.PrismaPromise<GetOrder_checklist_detailsAggregateType<T>>
+
+    /**
+     * Group by Order_checklist_details.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {order_checklist_detailsGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends order_checklist_detailsGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: order_checklist_detailsGroupByArgs['orderBy'] }
+        : { orderBy?: order_checklist_detailsGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, order_checklist_detailsGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetOrder_checklist_detailsGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the order_checklist_details model
+   */
+  readonly fields: order_checklist_detailsFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for order_checklist_details.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__order_checklist_detailsClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, ClientOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the order_checklist_details model
+   */ 
+  interface order_checklist_detailsFieldRefs {
+    readonly id: FieldRef<"order_checklist_details", 'String'>
+    readonly order_checklist_id: FieldRef<"order_checklist_details", 'String'>
+    readonly checked: FieldRef<"order_checklist_details", 'Boolean'>
+    readonly notes_by_prod: FieldRef<"order_checklist_details", 'String'>
+    readonly notes_by_qc: FieldRef<"order_checklist_details", 'String'>
+    readonly updated_by: FieldRef<"order_checklist_details", 'String'>
+    readonly created_by: FieldRef<"order_checklist_details", 'String'>
+    readonly updated_at: FieldRef<"order_checklist_details", 'DateTime'>
+    readonly created_at: FieldRef<"order_checklist_details", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * order_checklist_details findUnique
+   */
+  export type order_checklist_detailsFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the order_checklist_details
+     */
+    select?: order_checklist_detailsSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the order_checklist_details
+     */
+    omit?: order_checklist_detailsOmit<ExtArgs> | null
+    /**
+     * Filter, which order_checklist_details to fetch.
+     */
+    where: order_checklist_detailsWhereUniqueInput
+  }
+
+  /**
+   * order_checklist_details findUniqueOrThrow
+   */
+  export type order_checklist_detailsFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the order_checklist_details
+     */
+    select?: order_checklist_detailsSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the order_checklist_details
+     */
+    omit?: order_checklist_detailsOmit<ExtArgs> | null
+    /**
+     * Filter, which order_checklist_details to fetch.
+     */
+    where: order_checklist_detailsWhereUniqueInput
+  }
+
+  /**
+   * order_checklist_details findFirst
+   */
+  export type order_checklist_detailsFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the order_checklist_details
+     */
+    select?: order_checklist_detailsSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the order_checklist_details
+     */
+    omit?: order_checklist_detailsOmit<ExtArgs> | null
+    /**
+     * Filter, which order_checklist_details to fetch.
+     */
+    where?: order_checklist_detailsWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of order_checklist_details to fetch.
+     */
+    orderBy?: order_checklist_detailsOrderByWithRelationInput | order_checklist_detailsOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for order_checklist_details.
+     */
+    cursor?: order_checklist_detailsWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` order_checklist_details from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` order_checklist_details.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of order_checklist_details.
+     */
+    distinct?: Order_checklist_detailsScalarFieldEnum | Order_checklist_detailsScalarFieldEnum[]
+  }
+
+  /**
+   * order_checklist_details findFirstOrThrow
+   */
+  export type order_checklist_detailsFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the order_checklist_details
+     */
+    select?: order_checklist_detailsSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the order_checklist_details
+     */
+    omit?: order_checklist_detailsOmit<ExtArgs> | null
+    /**
+     * Filter, which order_checklist_details to fetch.
+     */
+    where?: order_checklist_detailsWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of order_checklist_details to fetch.
+     */
+    orderBy?: order_checklist_detailsOrderByWithRelationInput | order_checklist_detailsOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for order_checklist_details.
+     */
+    cursor?: order_checklist_detailsWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` order_checklist_details from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` order_checklist_details.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of order_checklist_details.
+     */
+    distinct?: Order_checklist_detailsScalarFieldEnum | Order_checklist_detailsScalarFieldEnum[]
+  }
+
+  /**
+   * order_checklist_details findMany
+   */
+  export type order_checklist_detailsFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the order_checklist_details
+     */
+    select?: order_checklist_detailsSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the order_checklist_details
+     */
+    omit?: order_checklist_detailsOmit<ExtArgs> | null
+    /**
+     * Filter, which order_checklist_details to fetch.
+     */
+    where?: order_checklist_detailsWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of order_checklist_details to fetch.
+     */
+    orderBy?: order_checklist_detailsOrderByWithRelationInput | order_checklist_detailsOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing order_checklist_details.
+     */
+    cursor?: order_checklist_detailsWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` order_checklist_details from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` order_checklist_details.
+     */
+    skip?: number
+    distinct?: Order_checklist_detailsScalarFieldEnum | Order_checklist_detailsScalarFieldEnum[]
+  }
+
+  /**
+   * order_checklist_details create
+   */
+  export type order_checklist_detailsCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the order_checklist_details
+     */
+    select?: order_checklist_detailsSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the order_checklist_details
+     */
+    omit?: order_checklist_detailsOmit<ExtArgs> | null
+    /**
+     * The data needed to create a order_checklist_details.
+     */
+    data: XOR<order_checklist_detailsCreateInput, order_checklist_detailsUncheckedCreateInput>
+  }
+
+  /**
+   * order_checklist_details createMany
+   */
+  export type order_checklist_detailsCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many order_checklist_details.
+     */
+    data: order_checklist_detailsCreateManyInput | order_checklist_detailsCreateManyInput[]
+  }
+
+  /**
+   * order_checklist_details update
+   */
+  export type order_checklist_detailsUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the order_checklist_details
+     */
+    select?: order_checklist_detailsSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the order_checklist_details
+     */
+    omit?: order_checklist_detailsOmit<ExtArgs> | null
+    /**
+     * The data needed to update a order_checklist_details.
+     */
+    data: XOR<order_checklist_detailsUpdateInput, order_checklist_detailsUncheckedUpdateInput>
+    /**
+     * Choose, which order_checklist_details to update.
+     */
+    where: order_checklist_detailsWhereUniqueInput
+  }
+
+  /**
+   * order_checklist_details updateMany
+   */
+  export type order_checklist_detailsUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update order_checklist_details.
+     */
+    data: XOR<order_checklist_detailsUpdateManyMutationInput, order_checklist_detailsUncheckedUpdateManyInput>
+    /**
+     * Filter which order_checklist_details to update
+     */
+    where?: order_checklist_detailsWhereInput
+    /**
+     * Limit how many order_checklist_details to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * order_checklist_details upsert
+   */
+  export type order_checklist_detailsUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the order_checklist_details
+     */
+    select?: order_checklist_detailsSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the order_checklist_details
+     */
+    omit?: order_checklist_detailsOmit<ExtArgs> | null
+    /**
+     * The filter to search for the order_checklist_details to update in case it exists.
+     */
+    where: order_checklist_detailsWhereUniqueInput
+    /**
+     * In case the order_checklist_details found by the `where` argument doesn't exist, create a new order_checklist_details with this data.
+     */
+    create: XOR<order_checklist_detailsCreateInput, order_checklist_detailsUncheckedCreateInput>
+    /**
+     * In case the order_checklist_details was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<order_checklist_detailsUpdateInput, order_checklist_detailsUncheckedUpdateInput>
+  }
+
+  /**
+   * order_checklist_details delete
+   */
+  export type order_checklist_detailsDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the order_checklist_details
+     */
+    select?: order_checklist_detailsSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the order_checklist_details
+     */
+    omit?: order_checklist_detailsOmit<ExtArgs> | null
+    /**
+     * Filter which order_checklist_details to delete.
+     */
+    where: order_checklist_detailsWhereUniqueInput
+  }
+
+  /**
+   * order_checklist_details deleteMany
+   */
+  export type order_checklist_detailsDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which order_checklist_details to delete
+     */
+    where?: order_checklist_detailsWhereInput
+    /**
+     * Limit how many order_checklist_details to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * order_checklist_details without action
+   */
+  export type order_checklist_detailsDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the order_checklist_details
+     */
+    select?: order_checklist_detailsSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the order_checklist_details
+     */
+    omit?: order_checklist_detailsOmit<ExtArgs> | null
+  }
+
+
+  /**
+   * Model order_checklist_notes
+   */
+
+  export type AggregateOrder_checklist_notes = {
+    _count: Order_checklist_notesCountAggregateOutputType | null
+    _min: Order_checklist_notesMinAggregateOutputType | null
+    _max: Order_checklist_notesMaxAggregateOutputType | null
+  }
+
+  export type Order_checklist_notesMinAggregateOutputType = {
+    id: string | null
+    order_checklist_detail_id: string | null
+    checked_status: boolean | null
+    notes: string | null
+    notes_by: string | null
+    updated_by: string | null
+    created_by: string | null
+    updated_at: Date | null
+    created_at: Date | null
+  }
+
+  export type Order_checklist_notesMaxAggregateOutputType = {
+    id: string | null
+    order_checklist_detail_id: string | null
+    checked_status: boolean | null
+    notes: string | null
+    notes_by: string | null
+    updated_by: string | null
+    created_by: string | null
+    updated_at: Date | null
+    created_at: Date | null
+  }
+
+  export type Order_checklist_notesCountAggregateOutputType = {
+    id: number
+    order_checklist_detail_id: number
+    checked_status: number
+    notes: number
+    notes_by: number
+    updated_by: number
+    created_by: number
+    updated_at: number
+    created_at: number
+    _all: number
+  }
+
+
+  export type Order_checklist_notesMinAggregateInputType = {
+    id?: true
+    order_checklist_detail_id?: true
+    checked_status?: true
+    notes?: true
+    notes_by?: true
+    updated_by?: true
+    created_by?: true
+    updated_at?: true
+    created_at?: true
+  }
+
+  export type Order_checklist_notesMaxAggregateInputType = {
+    id?: true
+    order_checklist_detail_id?: true
+    checked_status?: true
+    notes?: true
+    notes_by?: true
+    updated_by?: true
+    created_by?: true
+    updated_at?: true
+    created_at?: true
+  }
+
+  export type Order_checklist_notesCountAggregateInputType = {
+    id?: true
+    order_checklist_detail_id?: true
+    checked_status?: true
+    notes?: true
+    notes_by?: true
+    updated_by?: true
+    created_by?: true
+    updated_at?: true
+    created_at?: true
+    _all?: true
+  }
+
+  export type Order_checklist_notesAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which order_checklist_notes to aggregate.
+     */
+    where?: order_checklist_notesWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of order_checklist_notes to fetch.
+     */
+    orderBy?: order_checklist_notesOrderByWithRelationInput | order_checklist_notesOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: order_checklist_notesWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` order_checklist_notes from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` order_checklist_notes.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned order_checklist_notes
+    **/
+    _count?: true | Order_checklist_notesCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: Order_checklist_notesMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: Order_checklist_notesMaxAggregateInputType
+  }
+
+  export type GetOrder_checklist_notesAggregateType<T extends Order_checklist_notesAggregateArgs> = {
+        [P in keyof T & keyof AggregateOrder_checklist_notes]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateOrder_checklist_notes[P]>
+      : GetScalarType<T[P], AggregateOrder_checklist_notes[P]>
+  }
+
+
+
+
+  export type order_checklist_notesGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: order_checklist_notesWhereInput
+    orderBy?: order_checklist_notesOrderByWithAggregationInput | order_checklist_notesOrderByWithAggregationInput[]
+    by: Order_checklist_notesScalarFieldEnum[] | Order_checklist_notesScalarFieldEnum
+    having?: order_checklist_notesScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: Order_checklist_notesCountAggregateInputType | true
+    _min?: Order_checklist_notesMinAggregateInputType
+    _max?: Order_checklist_notesMaxAggregateInputType
+  }
+
+  export type Order_checklist_notesGroupByOutputType = {
+    id: string
+    order_checklist_detail_id: string
+    checked_status: boolean
+    notes: string
+    notes_by: string
+    updated_by: string
+    created_by: string
+    updated_at: Date | null
+    created_at: Date | null
+    _count: Order_checklist_notesCountAggregateOutputType | null
+    _min: Order_checklist_notesMinAggregateOutputType | null
+    _max: Order_checklist_notesMaxAggregateOutputType | null
+  }
+
+  type GetOrder_checklist_notesGroupByPayload<T extends order_checklist_notesGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<Order_checklist_notesGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof Order_checklist_notesGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], Order_checklist_notesGroupByOutputType[P]>
+            : GetScalarType<T[P], Order_checklist_notesGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type order_checklist_notesSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    order_checklist_detail_id?: boolean
+    checked_status?: boolean
+    notes?: boolean
+    notes_by?: boolean
+    updated_by?: boolean
+    created_by?: boolean
+    updated_at?: boolean
+    created_at?: boolean
+  }, ExtArgs["result"]["order_checklist_notes"]>
+
+
+
+  export type order_checklist_notesSelectScalar = {
+    id?: boolean
+    order_checklist_detail_id?: boolean
+    checked_status?: boolean
+    notes?: boolean
+    notes_by?: boolean
+    updated_by?: boolean
+    created_by?: boolean
+    updated_at?: boolean
+    created_at?: boolean
+  }
+
+  export type order_checklist_notesOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "order_checklist_detail_id" | "checked_status" | "notes" | "notes_by" | "updated_by" | "created_by" | "updated_at" | "created_at", ExtArgs["result"]["order_checklist_notes"]>
+
+  export type $order_checklist_notesPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "order_checklist_notes"
+    objects: {}
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      order_checklist_detail_id: string
+      checked_status: boolean
+      notes: string
+      notes_by: string
+      updated_by: string
+      created_by: string
+      updated_at: Date | null
+      created_at: Date | null
+    }, ExtArgs["result"]["order_checklist_notes"]>
+    composites: {}
+  }
+
+  type order_checklist_notesGetPayload<S extends boolean | null | undefined | order_checklist_notesDefaultArgs> = $Result.GetResult<Prisma.$order_checklist_notesPayload, S>
+
+  type order_checklist_notesCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<order_checklist_notesFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: Order_checklist_notesCountAggregateInputType | true
+    }
+
+  export interface order_checklist_notesDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, ClientOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['order_checklist_notes'], meta: { name: 'order_checklist_notes' } }
+    /**
+     * Find zero or one Order_checklist_notes that matches the filter.
+     * @param {order_checklist_notesFindUniqueArgs} args - Arguments to find a Order_checklist_notes
+     * @example
+     * // Get one Order_checklist_notes
+     * const order_checklist_notes = await prisma.order_checklist_notes.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends order_checklist_notesFindUniqueArgs>(args: SelectSubset<T, order_checklist_notesFindUniqueArgs<ExtArgs>>): Prisma__order_checklist_notesClient<$Result.GetResult<Prisma.$order_checklist_notesPayload<ExtArgs>, T, "findUnique", ClientOptions> | null, null, ExtArgs, ClientOptions>
+
+    /**
+     * Find one Order_checklist_notes that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {order_checklist_notesFindUniqueOrThrowArgs} args - Arguments to find a Order_checklist_notes
+     * @example
+     * // Get one Order_checklist_notes
+     * const order_checklist_notes = await prisma.order_checklist_notes.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends order_checklist_notesFindUniqueOrThrowArgs>(args: SelectSubset<T, order_checklist_notesFindUniqueOrThrowArgs<ExtArgs>>): Prisma__order_checklist_notesClient<$Result.GetResult<Prisma.$order_checklist_notesPayload<ExtArgs>, T, "findUniqueOrThrow", ClientOptions>, never, ExtArgs, ClientOptions>
+
+    /**
+     * Find the first Order_checklist_notes that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {order_checklist_notesFindFirstArgs} args - Arguments to find a Order_checklist_notes
+     * @example
+     * // Get one Order_checklist_notes
+     * const order_checklist_notes = await prisma.order_checklist_notes.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends order_checklist_notesFindFirstArgs>(args?: SelectSubset<T, order_checklist_notesFindFirstArgs<ExtArgs>>): Prisma__order_checklist_notesClient<$Result.GetResult<Prisma.$order_checklist_notesPayload<ExtArgs>, T, "findFirst", ClientOptions> | null, null, ExtArgs, ClientOptions>
+
+    /**
+     * Find the first Order_checklist_notes that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {order_checklist_notesFindFirstOrThrowArgs} args - Arguments to find a Order_checklist_notes
+     * @example
+     * // Get one Order_checklist_notes
+     * const order_checklist_notes = await prisma.order_checklist_notes.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends order_checklist_notesFindFirstOrThrowArgs>(args?: SelectSubset<T, order_checklist_notesFindFirstOrThrowArgs<ExtArgs>>): Prisma__order_checklist_notesClient<$Result.GetResult<Prisma.$order_checklist_notesPayload<ExtArgs>, T, "findFirstOrThrow", ClientOptions>, never, ExtArgs, ClientOptions>
+
+    /**
+     * Find zero or more Order_checklist_notes that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {order_checklist_notesFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all Order_checklist_notes
+     * const order_checklist_notes = await prisma.order_checklist_notes.findMany()
+     * 
+     * // Get first 10 Order_checklist_notes
+     * const order_checklist_notes = await prisma.order_checklist_notes.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const order_checklist_notesWithIdOnly = await prisma.order_checklist_notes.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends order_checklist_notesFindManyArgs>(args?: SelectSubset<T, order_checklist_notesFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$order_checklist_notesPayload<ExtArgs>, T, "findMany", ClientOptions>>
+
+    /**
+     * Create a Order_checklist_notes.
+     * @param {order_checklist_notesCreateArgs} args - Arguments to create a Order_checklist_notes.
+     * @example
+     * // Create one Order_checklist_notes
+     * const Order_checklist_notes = await prisma.order_checklist_notes.create({
+     *   data: {
+     *     // ... data to create a Order_checklist_notes
+     *   }
+     * })
+     * 
+     */
+    create<T extends order_checklist_notesCreateArgs>(args: SelectSubset<T, order_checklist_notesCreateArgs<ExtArgs>>): Prisma__order_checklist_notesClient<$Result.GetResult<Prisma.$order_checklist_notesPayload<ExtArgs>, T, "create", ClientOptions>, never, ExtArgs, ClientOptions>
+
+    /**
+     * Create many Order_checklist_notes.
+     * @param {order_checklist_notesCreateManyArgs} args - Arguments to create many Order_checklist_notes.
+     * @example
+     * // Create many Order_checklist_notes
+     * const order_checklist_notes = await prisma.order_checklist_notes.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends order_checklist_notesCreateManyArgs>(args?: SelectSubset<T, order_checklist_notesCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Delete a Order_checklist_notes.
+     * @param {order_checklist_notesDeleteArgs} args - Arguments to delete one Order_checklist_notes.
+     * @example
+     * // Delete one Order_checklist_notes
+     * const Order_checklist_notes = await prisma.order_checklist_notes.delete({
+     *   where: {
+     *     // ... filter to delete one Order_checklist_notes
+     *   }
+     * })
+     * 
+     */
+    delete<T extends order_checklist_notesDeleteArgs>(args: SelectSubset<T, order_checklist_notesDeleteArgs<ExtArgs>>): Prisma__order_checklist_notesClient<$Result.GetResult<Prisma.$order_checklist_notesPayload<ExtArgs>, T, "delete", ClientOptions>, never, ExtArgs, ClientOptions>
+
+    /**
+     * Update one Order_checklist_notes.
+     * @param {order_checklist_notesUpdateArgs} args - Arguments to update one Order_checklist_notes.
+     * @example
+     * // Update one Order_checklist_notes
+     * const order_checklist_notes = await prisma.order_checklist_notes.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends order_checklist_notesUpdateArgs>(args: SelectSubset<T, order_checklist_notesUpdateArgs<ExtArgs>>): Prisma__order_checklist_notesClient<$Result.GetResult<Prisma.$order_checklist_notesPayload<ExtArgs>, T, "update", ClientOptions>, never, ExtArgs, ClientOptions>
+
+    /**
+     * Delete zero or more Order_checklist_notes.
+     * @param {order_checklist_notesDeleteManyArgs} args - Arguments to filter Order_checklist_notes to delete.
+     * @example
+     * // Delete a few Order_checklist_notes
+     * const { count } = await prisma.order_checklist_notes.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends order_checklist_notesDeleteManyArgs>(args?: SelectSubset<T, order_checklist_notesDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more Order_checklist_notes.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {order_checklist_notesUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many Order_checklist_notes
+     * const order_checklist_notes = await prisma.order_checklist_notes.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends order_checklist_notesUpdateManyArgs>(args: SelectSubset<T, order_checklist_notesUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create or update one Order_checklist_notes.
+     * @param {order_checklist_notesUpsertArgs} args - Arguments to update or create a Order_checklist_notes.
+     * @example
+     * // Update or create a Order_checklist_notes
+     * const order_checklist_notes = await prisma.order_checklist_notes.upsert({
+     *   create: {
+     *     // ... data to create a Order_checklist_notes
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the Order_checklist_notes we want to update
+     *   }
+     * })
+     */
+    upsert<T extends order_checklist_notesUpsertArgs>(args: SelectSubset<T, order_checklist_notesUpsertArgs<ExtArgs>>): Prisma__order_checklist_notesClient<$Result.GetResult<Prisma.$order_checklist_notesPayload<ExtArgs>, T, "upsert", ClientOptions>, never, ExtArgs, ClientOptions>
+
+
+    /**
+     * Count the number of Order_checklist_notes.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {order_checklist_notesCountArgs} args - Arguments to filter Order_checklist_notes to count.
+     * @example
+     * // Count the number of Order_checklist_notes
+     * const count = await prisma.order_checklist_notes.count({
+     *   where: {
+     *     // ... the filter for the Order_checklist_notes we want to count
+     *   }
+     * })
+    **/
+    count<T extends order_checklist_notesCountArgs>(
+      args?: Subset<T, order_checklist_notesCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], Order_checklist_notesCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a Order_checklist_notes.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {Order_checklist_notesAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends Order_checklist_notesAggregateArgs>(args: Subset<T, Order_checklist_notesAggregateArgs>): Prisma.PrismaPromise<GetOrder_checklist_notesAggregateType<T>>
+
+    /**
+     * Group by Order_checklist_notes.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {order_checklist_notesGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends order_checklist_notesGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: order_checklist_notesGroupByArgs['orderBy'] }
+        : { orderBy?: order_checklist_notesGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, order_checklist_notesGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetOrder_checklist_notesGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the order_checklist_notes model
+   */
+  readonly fields: order_checklist_notesFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for order_checklist_notes.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__order_checklist_notesClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, ClientOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the order_checklist_notes model
+   */ 
+  interface order_checklist_notesFieldRefs {
+    readonly id: FieldRef<"order_checklist_notes", 'String'>
+    readonly order_checklist_detail_id: FieldRef<"order_checklist_notes", 'String'>
+    readonly checked_status: FieldRef<"order_checklist_notes", 'Boolean'>
+    readonly notes: FieldRef<"order_checklist_notes", 'String'>
+    readonly notes_by: FieldRef<"order_checklist_notes", 'String'>
+    readonly updated_by: FieldRef<"order_checklist_notes", 'String'>
+    readonly created_by: FieldRef<"order_checklist_notes", 'String'>
+    readonly updated_at: FieldRef<"order_checklist_notes", 'DateTime'>
+    readonly created_at: FieldRef<"order_checklist_notes", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * order_checklist_notes findUnique
+   */
+  export type order_checklist_notesFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the order_checklist_notes
+     */
+    select?: order_checklist_notesSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the order_checklist_notes
+     */
+    omit?: order_checklist_notesOmit<ExtArgs> | null
+    /**
+     * Filter, which order_checklist_notes to fetch.
+     */
+    where: order_checklist_notesWhereUniqueInput
+  }
+
+  /**
+   * order_checklist_notes findUniqueOrThrow
+   */
+  export type order_checklist_notesFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the order_checklist_notes
+     */
+    select?: order_checklist_notesSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the order_checklist_notes
+     */
+    omit?: order_checklist_notesOmit<ExtArgs> | null
+    /**
+     * Filter, which order_checklist_notes to fetch.
+     */
+    where: order_checklist_notesWhereUniqueInput
+  }
+
+  /**
+   * order_checklist_notes findFirst
+   */
+  export type order_checklist_notesFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the order_checklist_notes
+     */
+    select?: order_checklist_notesSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the order_checklist_notes
+     */
+    omit?: order_checklist_notesOmit<ExtArgs> | null
+    /**
+     * Filter, which order_checklist_notes to fetch.
+     */
+    where?: order_checklist_notesWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of order_checklist_notes to fetch.
+     */
+    orderBy?: order_checklist_notesOrderByWithRelationInput | order_checklist_notesOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for order_checklist_notes.
+     */
+    cursor?: order_checklist_notesWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` order_checklist_notes from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` order_checklist_notes.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of order_checklist_notes.
+     */
+    distinct?: Order_checklist_notesScalarFieldEnum | Order_checklist_notesScalarFieldEnum[]
+  }
+
+  /**
+   * order_checklist_notes findFirstOrThrow
+   */
+  export type order_checklist_notesFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the order_checklist_notes
+     */
+    select?: order_checklist_notesSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the order_checklist_notes
+     */
+    omit?: order_checklist_notesOmit<ExtArgs> | null
+    /**
+     * Filter, which order_checklist_notes to fetch.
+     */
+    where?: order_checklist_notesWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of order_checklist_notes to fetch.
+     */
+    orderBy?: order_checklist_notesOrderByWithRelationInput | order_checklist_notesOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for order_checklist_notes.
+     */
+    cursor?: order_checklist_notesWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` order_checklist_notes from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` order_checklist_notes.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of order_checklist_notes.
+     */
+    distinct?: Order_checklist_notesScalarFieldEnum | Order_checklist_notesScalarFieldEnum[]
+  }
+
+  /**
+   * order_checklist_notes findMany
+   */
+  export type order_checklist_notesFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the order_checklist_notes
+     */
+    select?: order_checklist_notesSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the order_checklist_notes
+     */
+    omit?: order_checklist_notesOmit<ExtArgs> | null
+    /**
+     * Filter, which order_checklist_notes to fetch.
+     */
+    where?: order_checklist_notesWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of order_checklist_notes to fetch.
+     */
+    orderBy?: order_checklist_notesOrderByWithRelationInput | order_checklist_notesOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing order_checklist_notes.
+     */
+    cursor?: order_checklist_notesWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` order_checklist_notes from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` order_checklist_notes.
+     */
+    skip?: number
+    distinct?: Order_checklist_notesScalarFieldEnum | Order_checklist_notesScalarFieldEnum[]
+  }
+
+  /**
+   * order_checklist_notes create
+   */
+  export type order_checklist_notesCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the order_checklist_notes
+     */
+    select?: order_checklist_notesSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the order_checklist_notes
+     */
+    omit?: order_checklist_notesOmit<ExtArgs> | null
+    /**
+     * The data needed to create a order_checklist_notes.
+     */
+    data: XOR<order_checklist_notesCreateInput, order_checklist_notesUncheckedCreateInput>
+  }
+
+  /**
+   * order_checklist_notes createMany
+   */
+  export type order_checklist_notesCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many order_checklist_notes.
+     */
+    data: order_checklist_notesCreateManyInput | order_checklist_notesCreateManyInput[]
+  }
+
+  /**
+   * order_checklist_notes update
+   */
+  export type order_checklist_notesUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the order_checklist_notes
+     */
+    select?: order_checklist_notesSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the order_checklist_notes
+     */
+    omit?: order_checklist_notesOmit<ExtArgs> | null
+    /**
+     * The data needed to update a order_checklist_notes.
+     */
+    data: XOR<order_checklist_notesUpdateInput, order_checklist_notesUncheckedUpdateInput>
+    /**
+     * Choose, which order_checklist_notes to update.
+     */
+    where: order_checklist_notesWhereUniqueInput
+  }
+
+  /**
+   * order_checklist_notes updateMany
+   */
+  export type order_checklist_notesUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update order_checklist_notes.
+     */
+    data: XOR<order_checklist_notesUpdateManyMutationInput, order_checklist_notesUncheckedUpdateManyInput>
+    /**
+     * Filter which order_checklist_notes to update
+     */
+    where?: order_checklist_notesWhereInput
+    /**
+     * Limit how many order_checklist_notes to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * order_checklist_notes upsert
+   */
+  export type order_checklist_notesUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the order_checklist_notes
+     */
+    select?: order_checklist_notesSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the order_checklist_notes
+     */
+    omit?: order_checklist_notesOmit<ExtArgs> | null
+    /**
+     * The filter to search for the order_checklist_notes to update in case it exists.
+     */
+    where: order_checklist_notesWhereUniqueInput
+    /**
+     * In case the order_checklist_notes found by the `where` argument doesn't exist, create a new order_checklist_notes with this data.
+     */
+    create: XOR<order_checklist_notesCreateInput, order_checklist_notesUncheckedCreateInput>
+    /**
+     * In case the order_checklist_notes was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<order_checklist_notesUpdateInput, order_checklist_notesUncheckedUpdateInput>
+  }
+
+  /**
+   * order_checklist_notes delete
+   */
+  export type order_checklist_notesDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the order_checklist_notes
+     */
+    select?: order_checklist_notesSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the order_checklist_notes
+     */
+    omit?: order_checklist_notesOmit<ExtArgs> | null
+    /**
+     * Filter which order_checklist_notes to delete.
+     */
+    where: order_checklist_notesWhereUniqueInput
+  }
+
+  /**
+   * order_checklist_notes deleteMany
+   */
+  export type order_checklist_notesDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which order_checklist_notes to delete
+     */
+    where?: order_checklist_notesWhereInput
+    /**
+     * Limit how many order_checklist_notes to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * order_checklist_notes without action
+   */
+  export type order_checklist_notesDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the order_checklist_notes
+     */
+    select?: order_checklist_notesSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the order_checklist_notes
+     */
+    omit?: order_checklist_notesOmit<ExtArgs> | null
+  }
+
+
+  /**
+   * Model order_image_checklists
+   */
+
+  export type AggregateOrder_image_checklists = {
+    _count: Order_image_checklistsCountAggregateOutputType | null
+    _min: Order_image_checklistsMinAggregateOutputType | null
+    _max: Order_image_checklistsMaxAggregateOutputType | null
+  }
+
+  export type Order_image_checklistsMinAggregateOutputType = {
+    id: string | null
+    order_checklist_detail_id: string | null
+    filename: string | null
+    updated_by: string | null
+    created_by: string | null
+    updated_at: Date | null
+    created_at: Date | null
+  }
+
+  export type Order_image_checklistsMaxAggregateOutputType = {
+    id: string | null
+    order_checklist_detail_id: string | null
+    filename: string | null
+    updated_by: string | null
+    created_by: string | null
+    updated_at: Date | null
+    created_at: Date | null
+  }
+
+  export type Order_image_checklistsCountAggregateOutputType = {
+    id: number
+    order_checklist_detail_id: number
+    filename: number
+    updated_by: number
+    created_by: number
+    updated_at: number
+    created_at: number
+    _all: number
+  }
+
+
+  export type Order_image_checklistsMinAggregateInputType = {
+    id?: true
+    order_checklist_detail_id?: true
+    filename?: true
+    updated_by?: true
+    created_by?: true
+    updated_at?: true
+    created_at?: true
+  }
+
+  export type Order_image_checklistsMaxAggregateInputType = {
+    id?: true
+    order_checklist_detail_id?: true
+    filename?: true
+    updated_by?: true
+    created_by?: true
+    updated_at?: true
+    created_at?: true
+  }
+
+  export type Order_image_checklistsCountAggregateInputType = {
+    id?: true
+    order_checklist_detail_id?: true
+    filename?: true
+    updated_by?: true
+    created_by?: true
+    updated_at?: true
+    created_at?: true
+    _all?: true
+  }
+
+  export type Order_image_checklistsAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which order_image_checklists to aggregate.
+     */
+    where?: order_image_checklistsWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of order_image_checklists to fetch.
+     */
+    orderBy?: order_image_checklistsOrderByWithRelationInput | order_image_checklistsOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: order_image_checklistsWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` order_image_checklists from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` order_image_checklists.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned order_image_checklists
+    **/
+    _count?: true | Order_image_checklistsCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: Order_image_checklistsMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: Order_image_checklistsMaxAggregateInputType
+  }
+
+  export type GetOrder_image_checklistsAggregateType<T extends Order_image_checklistsAggregateArgs> = {
+        [P in keyof T & keyof AggregateOrder_image_checklists]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateOrder_image_checklists[P]>
+      : GetScalarType<T[P], AggregateOrder_image_checklists[P]>
+  }
+
+
+
+
+  export type order_image_checklistsGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: order_image_checklistsWhereInput
+    orderBy?: order_image_checklistsOrderByWithAggregationInput | order_image_checklistsOrderByWithAggregationInput[]
+    by: Order_image_checklistsScalarFieldEnum[] | Order_image_checklistsScalarFieldEnum
+    having?: order_image_checklistsScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: Order_image_checklistsCountAggregateInputType | true
+    _min?: Order_image_checklistsMinAggregateInputType
+    _max?: Order_image_checklistsMaxAggregateInputType
+  }
+
+  export type Order_image_checklistsGroupByOutputType = {
+    id: string
+    order_checklist_detail_id: string
+    filename: string
+    updated_by: string
+    created_by: string
+    updated_at: Date | null
+    created_at: Date | null
+    _count: Order_image_checklistsCountAggregateOutputType | null
+    _min: Order_image_checklistsMinAggregateOutputType | null
+    _max: Order_image_checklistsMaxAggregateOutputType | null
+  }
+
+  type GetOrder_image_checklistsGroupByPayload<T extends order_image_checklistsGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<Order_image_checklistsGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof Order_image_checklistsGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], Order_image_checklistsGroupByOutputType[P]>
+            : GetScalarType<T[P], Order_image_checklistsGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type order_image_checklistsSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    order_checklist_detail_id?: boolean
+    filename?: boolean
+    updated_by?: boolean
+    created_by?: boolean
+    updated_at?: boolean
+    created_at?: boolean
+  }, ExtArgs["result"]["order_image_checklists"]>
+
+
+
+  export type order_image_checklistsSelectScalar = {
+    id?: boolean
+    order_checklist_detail_id?: boolean
+    filename?: boolean
+    updated_by?: boolean
+    created_by?: boolean
+    updated_at?: boolean
+    created_at?: boolean
+  }
+
+  export type order_image_checklistsOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "order_checklist_detail_id" | "filename" | "updated_by" | "created_by" | "updated_at" | "created_at", ExtArgs["result"]["order_image_checklists"]>
+
+  export type $order_image_checklistsPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "order_image_checklists"
+    objects: {}
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      order_checklist_detail_id: string
+      filename: string
+      updated_by: string
+      created_by: string
+      updated_at: Date | null
+      created_at: Date | null
+    }, ExtArgs["result"]["order_image_checklists"]>
+    composites: {}
+  }
+
+  type order_image_checklistsGetPayload<S extends boolean | null | undefined | order_image_checklistsDefaultArgs> = $Result.GetResult<Prisma.$order_image_checklistsPayload, S>
+
+  type order_image_checklistsCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<order_image_checklistsFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: Order_image_checklistsCountAggregateInputType | true
+    }
+
+  export interface order_image_checklistsDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, ClientOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['order_image_checklists'], meta: { name: 'order_image_checklists' } }
+    /**
+     * Find zero or one Order_image_checklists that matches the filter.
+     * @param {order_image_checklistsFindUniqueArgs} args - Arguments to find a Order_image_checklists
+     * @example
+     * // Get one Order_image_checklists
+     * const order_image_checklists = await prisma.order_image_checklists.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends order_image_checklistsFindUniqueArgs>(args: SelectSubset<T, order_image_checklistsFindUniqueArgs<ExtArgs>>): Prisma__order_image_checklistsClient<$Result.GetResult<Prisma.$order_image_checklistsPayload<ExtArgs>, T, "findUnique", ClientOptions> | null, null, ExtArgs, ClientOptions>
+
+    /**
+     * Find one Order_image_checklists that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {order_image_checklistsFindUniqueOrThrowArgs} args - Arguments to find a Order_image_checklists
+     * @example
+     * // Get one Order_image_checklists
+     * const order_image_checklists = await prisma.order_image_checklists.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends order_image_checklistsFindUniqueOrThrowArgs>(args: SelectSubset<T, order_image_checklistsFindUniqueOrThrowArgs<ExtArgs>>): Prisma__order_image_checklistsClient<$Result.GetResult<Prisma.$order_image_checklistsPayload<ExtArgs>, T, "findUniqueOrThrow", ClientOptions>, never, ExtArgs, ClientOptions>
+
+    /**
+     * Find the first Order_image_checklists that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {order_image_checklistsFindFirstArgs} args - Arguments to find a Order_image_checklists
+     * @example
+     * // Get one Order_image_checklists
+     * const order_image_checklists = await prisma.order_image_checklists.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends order_image_checklistsFindFirstArgs>(args?: SelectSubset<T, order_image_checklistsFindFirstArgs<ExtArgs>>): Prisma__order_image_checklistsClient<$Result.GetResult<Prisma.$order_image_checklistsPayload<ExtArgs>, T, "findFirst", ClientOptions> | null, null, ExtArgs, ClientOptions>
+
+    /**
+     * Find the first Order_image_checklists that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {order_image_checklistsFindFirstOrThrowArgs} args - Arguments to find a Order_image_checklists
+     * @example
+     * // Get one Order_image_checklists
+     * const order_image_checklists = await prisma.order_image_checklists.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends order_image_checklistsFindFirstOrThrowArgs>(args?: SelectSubset<T, order_image_checklistsFindFirstOrThrowArgs<ExtArgs>>): Prisma__order_image_checklistsClient<$Result.GetResult<Prisma.$order_image_checklistsPayload<ExtArgs>, T, "findFirstOrThrow", ClientOptions>, never, ExtArgs, ClientOptions>
+
+    /**
+     * Find zero or more Order_image_checklists that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {order_image_checklistsFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all Order_image_checklists
+     * const order_image_checklists = await prisma.order_image_checklists.findMany()
+     * 
+     * // Get first 10 Order_image_checklists
+     * const order_image_checklists = await prisma.order_image_checklists.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const order_image_checklistsWithIdOnly = await prisma.order_image_checklists.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends order_image_checklistsFindManyArgs>(args?: SelectSubset<T, order_image_checklistsFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$order_image_checklistsPayload<ExtArgs>, T, "findMany", ClientOptions>>
+
+    /**
+     * Create a Order_image_checklists.
+     * @param {order_image_checklistsCreateArgs} args - Arguments to create a Order_image_checklists.
+     * @example
+     * // Create one Order_image_checklists
+     * const Order_image_checklists = await prisma.order_image_checklists.create({
+     *   data: {
+     *     // ... data to create a Order_image_checklists
+     *   }
+     * })
+     * 
+     */
+    create<T extends order_image_checklistsCreateArgs>(args: SelectSubset<T, order_image_checklistsCreateArgs<ExtArgs>>): Prisma__order_image_checklistsClient<$Result.GetResult<Prisma.$order_image_checklistsPayload<ExtArgs>, T, "create", ClientOptions>, never, ExtArgs, ClientOptions>
+
+    /**
+     * Create many Order_image_checklists.
+     * @param {order_image_checklistsCreateManyArgs} args - Arguments to create many Order_image_checklists.
+     * @example
+     * // Create many Order_image_checklists
+     * const order_image_checklists = await prisma.order_image_checklists.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends order_image_checklistsCreateManyArgs>(args?: SelectSubset<T, order_image_checklistsCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Delete a Order_image_checklists.
+     * @param {order_image_checklistsDeleteArgs} args - Arguments to delete one Order_image_checklists.
+     * @example
+     * // Delete one Order_image_checklists
+     * const Order_image_checklists = await prisma.order_image_checklists.delete({
+     *   where: {
+     *     // ... filter to delete one Order_image_checklists
+     *   }
+     * })
+     * 
+     */
+    delete<T extends order_image_checklistsDeleteArgs>(args: SelectSubset<T, order_image_checklistsDeleteArgs<ExtArgs>>): Prisma__order_image_checklistsClient<$Result.GetResult<Prisma.$order_image_checklistsPayload<ExtArgs>, T, "delete", ClientOptions>, never, ExtArgs, ClientOptions>
+
+    /**
+     * Update one Order_image_checklists.
+     * @param {order_image_checklistsUpdateArgs} args - Arguments to update one Order_image_checklists.
+     * @example
+     * // Update one Order_image_checklists
+     * const order_image_checklists = await prisma.order_image_checklists.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends order_image_checklistsUpdateArgs>(args: SelectSubset<T, order_image_checklistsUpdateArgs<ExtArgs>>): Prisma__order_image_checklistsClient<$Result.GetResult<Prisma.$order_image_checklistsPayload<ExtArgs>, T, "update", ClientOptions>, never, ExtArgs, ClientOptions>
+
+    /**
+     * Delete zero or more Order_image_checklists.
+     * @param {order_image_checklistsDeleteManyArgs} args - Arguments to filter Order_image_checklists to delete.
+     * @example
+     * // Delete a few Order_image_checklists
+     * const { count } = await prisma.order_image_checklists.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends order_image_checklistsDeleteManyArgs>(args?: SelectSubset<T, order_image_checklistsDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more Order_image_checklists.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {order_image_checklistsUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many Order_image_checklists
+     * const order_image_checklists = await prisma.order_image_checklists.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends order_image_checklistsUpdateManyArgs>(args: SelectSubset<T, order_image_checklistsUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create or update one Order_image_checklists.
+     * @param {order_image_checklistsUpsertArgs} args - Arguments to update or create a Order_image_checklists.
+     * @example
+     * // Update or create a Order_image_checklists
+     * const order_image_checklists = await prisma.order_image_checklists.upsert({
+     *   create: {
+     *     // ... data to create a Order_image_checklists
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the Order_image_checklists we want to update
+     *   }
+     * })
+     */
+    upsert<T extends order_image_checklistsUpsertArgs>(args: SelectSubset<T, order_image_checklistsUpsertArgs<ExtArgs>>): Prisma__order_image_checklistsClient<$Result.GetResult<Prisma.$order_image_checklistsPayload<ExtArgs>, T, "upsert", ClientOptions>, never, ExtArgs, ClientOptions>
+
+
+    /**
+     * Count the number of Order_image_checklists.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {order_image_checklistsCountArgs} args - Arguments to filter Order_image_checklists to count.
+     * @example
+     * // Count the number of Order_image_checklists
+     * const count = await prisma.order_image_checklists.count({
+     *   where: {
+     *     // ... the filter for the Order_image_checklists we want to count
+     *   }
+     * })
+    **/
+    count<T extends order_image_checklistsCountArgs>(
+      args?: Subset<T, order_image_checklistsCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], Order_image_checklistsCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a Order_image_checklists.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {Order_image_checklistsAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends Order_image_checklistsAggregateArgs>(args: Subset<T, Order_image_checklistsAggregateArgs>): Prisma.PrismaPromise<GetOrder_image_checklistsAggregateType<T>>
+
+    /**
+     * Group by Order_image_checklists.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {order_image_checklistsGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends order_image_checklistsGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: order_image_checklistsGroupByArgs['orderBy'] }
+        : { orderBy?: order_image_checklistsGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, order_image_checklistsGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetOrder_image_checklistsGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the order_image_checklists model
+   */
+  readonly fields: order_image_checklistsFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for order_image_checklists.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__order_image_checklistsClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, ClientOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the order_image_checklists model
+   */ 
+  interface order_image_checklistsFieldRefs {
+    readonly id: FieldRef<"order_image_checklists", 'String'>
+    readonly order_checklist_detail_id: FieldRef<"order_image_checklists", 'String'>
+    readonly filename: FieldRef<"order_image_checklists", 'String'>
+    readonly updated_by: FieldRef<"order_image_checklists", 'String'>
+    readonly created_by: FieldRef<"order_image_checklists", 'String'>
+    readonly updated_at: FieldRef<"order_image_checklists", 'DateTime'>
+    readonly created_at: FieldRef<"order_image_checklists", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * order_image_checklists findUnique
+   */
+  export type order_image_checklistsFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the order_image_checklists
+     */
+    select?: order_image_checklistsSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the order_image_checklists
+     */
+    omit?: order_image_checklistsOmit<ExtArgs> | null
+    /**
+     * Filter, which order_image_checklists to fetch.
+     */
+    where: order_image_checklistsWhereUniqueInput
+  }
+
+  /**
+   * order_image_checklists findUniqueOrThrow
+   */
+  export type order_image_checklistsFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the order_image_checklists
+     */
+    select?: order_image_checklistsSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the order_image_checklists
+     */
+    omit?: order_image_checklistsOmit<ExtArgs> | null
+    /**
+     * Filter, which order_image_checklists to fetch.
+     */
+    where: order_image_checklistsWhereUniqueInput
+  }
+
+  /**
+   * order_image_checklists findFirst
+   */
+  export type order_image_checklistsFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the order_image_checklists
+     */
+    select?: order_image_checklistsSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the order_image_checklists
+     */
+    omit?: order_image_checklistsOmit<ExtArgs> | null
+    /**
+     * Filter, which order_image_checklists to fetch.
+     */
+    where?: order_image_checklistsWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of order_image_checklists to fetch.
+     */
+    orderBy?: order_image_checklistsOrderByWithRelationInput | order_image_checklistsOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for order_image_checklists.
+     */
+    cursor?: order_image_checklistsWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` order_image_checklists from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` order_image_checklists.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of order_image_checklists.
+     */
+    distinct?: Order_image_checklistsScalarFieldEnum | Order_image_checklistsScalarFieldEnum[]
+  }
+
+  /**
+   * order_image_checklists findFirstOrThrow
+   */
+  export type order_image_checklistsFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the order_image_checklists
+     */
+    select?: order_image_checklistsSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the order_image_checklists
+     */
+    omit?: order_image_checklistsOmit<ExtArgs> | null
+    /**
+     * Filter, which order_image_checklists to fetch.
+     */
+    where?: order_image_checklistsWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of order_image_checklists to fetch.
+     */
+    orderBy?: order_image_checklistsOrderByWithRelationInput | order_image_checklistsOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for order_image_checklists.
+     */
+    cursor?: order_image_checklistsWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` order_image_checklists from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` order_image_checklists.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of order_image_checklists.
+     */
+    distinct?: Order_image_checklistsScalarFieldEnum | Order_image_checklistsScalarFieldEnum[]
+  }
+
+  /**
+   * order_image_checklists findMany
+   */
+  export type order_image_checklistsFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the order_image_checklists
+     */
+    select?: order_image_checklistsSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the order_image_checklists
+     */
+    omit?: order_image_checklistsOmit<ExtArgs> | null
+    /**
+     * Filter, which order_image_checklists to fetch.
+     */
+    where?: order_image_checklistsWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of order_image_checklists to fetch.
+     */
+    orderBy?: order_image_checklistsOrderByWithRelationInput | order_image_checklistsOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing order_image_checklists.
+     */
+    cursor?: order_image_checklistsWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` order_image_checklists from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` order_image_checklists.
+     */
+    skip?: number
+    distinct?: Order_image_checklistsScalarFieldEnum | Order_image_checklistsScalarFieldEnum[]
+  }
+
+  /**
+   * order_image_checklists create
+   */
+  export type order_image_checklistsCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the order_image_checklists
+     */
+    select?: order_image_checklistsSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the order_image_checklists
+     */
+    omit?: order_image_checklistsOmit<ExtArgs> | null
+    /**
+     * The data needed to create a order_image_checklists.
+     */
+    data: XOR<order_image_checklistsCreateInput, order_image_checklistsUncheckedCreateInput>
+  }
+
+  /**
+   * order_image_checklists createMany
+   */
+  export type order_image_checklistsCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many order_image_checklists.
+     */
+    data: order_image_checklistsCreateManyInput | order_image_checklistsCreateManyInput[]
+  }
+
+  /**
+   * order_image_checklists update
+   */
+  export type order_image_checklistsUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the order_image_checklists
+     */
+    select?: order_image_checklistsSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the order_image_checklists
+     */
+    omit?: order_image_checklistsOmit<ExtArgs> | null
+    /**
+     * The data needed to update a order_image_checklists.
+     */
+    data: XOR<order_image_checklistsUpdateInput, order_image_checklistsUncheckedUpdateInput>
+    /**
+     * Choose, which order_image_checklists to update.
+     */
+    where: order_image_checklistsWhereUniqueInput
+  }
+
+  /**
+   * order_image_checklists updateMany
+   */
+  export type order_image_checklistsUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update order_image_checklists.
+     */
+    data: XOR<order_image_checklistsUpdateManyMutationInput, order_image_checklistsUncheckedUpdateManyInput>
+    /**
+     * Filter which order_image_checklists to update
+     */
+    where?: order_image_checklistsWhereInput
+    /**
+     * Limit how many order_image_checklists to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * order_image_checklists upsert
+   */
+  export type order_image_checklistsUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the order_image_checklists
+     */
+    select?: order_image_checklistsSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the order_image_checklists
+     */
+    omit?: order_image_checklistsOmit<ExtArgs> | null
+    /**
+     * The filter to search for the order_image_checklists to update in case it exists.
+     */
+    where: order_image_checklistsWhereUniqueInput
+    /**
+     * In case the order_image_checklists found by the `where` argument doesn't exist, create a new order_image_checklists with this data.
+     */
+    create: XOR<order_image_checklistsCreateInput, order_image_checklistsUncheckedCreateInput>
+    /**
+     * In case the order_image_checklists was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<order_image_checklistsUpdateInput, order_image_checklistsUncheckedUpdateInput>
+  }
+
+  /**
+   * order_image_checklists delete
+   */
+  export type order_image_checklistsDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the order_image_checklists
+     */
+    select?: order_image_checklistsSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the order_image_checklists
+     */
+    omit?: order_image_checklistsOmit<ExtArgs> | null
+    /**
+     * Filter which order_image_checklists to delete.
+     */
+    where: order_image_checklistsWhereUniqueInput
+  }
+
+  /**
+   * order_image_checklists deleteMany
+   */
+  export type order_image_checklistsDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which order_image_checklists to delete
+     */
+    where?: order_image_checklistsWhereInput
+    /**
+     * Limit how many order_image_checklists to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * order_image_checklists without action
+   */
+  export type order_image_checklistsDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the order_image_checklists
+     */
+    select?: order_image_checklistsSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the order_image_checklists
+     */
+    omit?: order_image_checklistsOmit<ExtArgs> | null
+  }
+
+
+  /**
+   * Model order_image_notes
+   */
+
+  export type AggregateOrder_image_notes = {
+    _count: Order_image_notesCountAggregateOutputType | null
+    _min: Order_image_notesMinAggregateOutputType | null
+    _max: Order_image_notesMaxAggregateOutputType | null
+  }
+
+  export type Order_image_notesMinAggregateOutputType = {
+    id: string | null
+    order_image_checklist_id: string | null
+    filename: string | null
+    status: boolean | null
+    notes: string | null
+    notes_by: string | null
+    updated_by: string | null
+    created_by: string | null
+    updated_at: Date | null
+    created_at: Date | null
+  }
+
+  export type Order_image_notesMaxAggregateOutputType = {
+    id: string | null
+    order_image_checklist_id: string | null
+    filename: string | null
+    status: boolean | null
+    notes: string | null
+    notes_by: string | null
+    updated_by: string | null
+    created_by: string | null
+    updated_at: Date | null
+    created_at: Date | null
+  }
+
+  export type Order_image_notesCountAggregateOutputType = {
+    id: number
+    order_image_checklist_id: number
+    filename: number
+    status: number
+    notes: number
+    notes_by: number
+    updated_by: number
+    created_by: number
+    updated_at: number
+    created_at: number
+    _all: number
+  }
+
+
+  export type Order_image_notesMinAggregateInputType = {
+    id?: true
+    order_image_checklist_id?: true
+    filename?: true
+    status?: true
+    notes?: true
+    notes_by?: true
+    updated_by?: true
+    created_by?: true
+    updated_at?: true
+    created_at?: true
+  }
+
+  export type Order_image_notesMaxAggregateInputType = {
+    id?: true
+    order_image_checklist_id?: true
+    filename?: true
+    status?: true
+    notes?: true
+    notes_by?: true
+    updated_by?: true
+    created_by?: true
+    updated_at?: true
+    created_at?: true
+  }
+
+  export type Order_image_notesCountAggregateInputType = {
+    id?: true
+    order_image_checklist_id?: true
+    filename?: true
+    status?: true
+    notes?: true
+    notes_by?: true
+    updated_by?: true
+    created_by?: true
+    updated_at?: true
+    created_at?: true
+    _all?: true
+  }
+
+  export type Order_image_notesAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which order_image_notes to aggregate.
+     */
+    where?: order_image_notesWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of order_image_notes to fetch.
+     */
+    orderBy?: order_image_notesOrderByWithRelationInput | order_image_notesOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: order_image_notesWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` order_image_notes from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` order_image_notes.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned order_image_notes
+    **/
+    _count?: true | Order_image_notesCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: Order_image_notesMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: Order_image_notesMaxAggregateInputType
+  }
+
+  export type GetOrder_image_notesAggregateType<T extends Order_image_notesAggregateArgs> = {
+        [P in keyof T & keyof AggregateOrder_image_notes]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateOrder_image_notes[P]>
+      : GetScalarType<T[P], AggregateOrder_image_notes[P]>
+  }
+
+
+
+
+  export type order_image_notesGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: order_image_notesWhereInput
+    orderBy?: order_image_notesOrderByWithAggregationInput | order_image_notesOrderByWithAggregationInput[]
+    by: Order_image_notesScalarFieldEnum[] | Order_image_notesScalarFieldEnum
+    having?: order_image_notesScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: Order_image_notesCountAggregateInputType | true
+    _min?: Order_image_notesMinAggregateInputType
+    _max?: Order_image_notesMaxAggregateInputType
+  }
+
+  export type Order_image_notesGroupByOutputType = {
+    id: string
+    order_image_checklist_id: string
+    filename: string
+    status: boolean
+    notes: string
+    notes_by: string
+    updated_by: string
+    created_by: string
+    updated_at: Date | null
+    created_at: Date | null
+    _count: Order_image_notesCountAggregateOutputType | null
+    _min: Order_image_notesMinAggregateOutputType | null
+    _max: Order_image_notesMaxAggregateOutputType | null
+  }
+
+  type GetOrder_image_notesGroupByPayload<T extends order_image_notesGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<Order_image_notesGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof Order_image_notesGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], Order_image_notesGroupByOutputType[P]>
+            : GetScalarType<T[P], Order_image_notesGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type order_image_notesSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    order_image_checklist_id?: boolean
+    filename?: boolean
+    status?: boolean
+    notes?: boolean
+    notes_by?: boolean
+    updated_by?: boolean
+    created_by?: boolean
+    updated_at?: boolean
+    created_at?: boolean
+  }, ExtArgs["result"]["order_image_notes"]>
+
+
+
+  export type order_image_notesSelectScalar = {
+    id?: boolean
+    order_image_checklist_id?: boolean
+    filename?: boolean
+    status?: boolean
+    notes?: boolean
+    notes_by?: boolean
+    updated_by?: boolean
+    created_by?: boolean
+    updated_at?: boolean
+    created_at?: boolean
+  }
+
+  export type order_image_notesOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "order_image_checklist_id" | "filename" | "status" | "notes" | "notes_by" | "updated_by" | "created_by" | "updated_at" | "created_at", ExtArgs["result"]["order_image_notes"]>
+
+  export type $order_image_notesPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "order_image_notes"
+    objects: {}
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      order_image_checklist_id: string
+      filename: string
+      status: boolean
+      notes: string
+      notes_by: string
+      updated_by: string
+      created_by: string
+      updated_at: Date | null
+      created_at: Date | null
+    }, ExtArgs["result"]["order_image_notes"]>
+    composites: {}
+  }
+
+  type order_image_notesGetPayload<S extends boolean | null | undefined | order_image_notesDefaultArgs> = $Result.GetResult<Prisma.$order_image_notesPayload, S>
+
+  type order_image_notesCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<order_image_notesFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: Order_image_notesCountAggregateInputType | true
+    }
+
+  export interface order_image_notesDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, ClientOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['order_image_notes'], meta: { name: 'order_image_notes' } }
+    /**
+     * Find zero or one Order_image_notes that matches the filter.
+     * @param {order_image_notesFindUniqueArgs} args - Arguments to find a Order_image_notes
+     * @example
+     * // Get one Order_image_notes
+     * const order_image_notes = await prisma.order_image_notes.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends order_image_notesFindUniqueArgs>(args: SelectSubset<T, order_image_notesFindUniqueArgs<ExtArgs>>): Prisma__order_image_notesClient<$Result.GetResult<Prisma.$order_image_notesPayload<ExtArgs>, T, "findUnique", ClientOptions> | null, null, ExtArgs, ClientOptions>
+
+    /**
+     * Find one Order_image_notes that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {order_image_notesFindUniqueOrThrowArgs} args - Arguments to find a Order_image_notes
+     * @example
+     * // Get one Order_image_notes
+     * const order_image_notes = await prisma.order_image_notes.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends order_image_notesFindUniqueOrThrowArgs>(args: SelectSubset<T, order_image_notesFindUniqueOrThrowArgs<ExtArgs>>): Prisma__order_image_notesClient<$Result.GetResult<Prisma.$order_image_notesPayload<ExtArgs>, T, "findUniqueOrThrow", ClientOptions>, never, ExtArgs, ClientOptions>
+
+    /**
+     * Find the first Order_image_notes that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {order_image_notesFindFirstArgs} args - Arguments to find a Order_image_notes
+     * @example
+     * // Get one Order_image_notes
+     * const order_image_notes = await prisma.order_image_notes.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends order_image_notesFindFirstArgs>(args?: SelectSubset<T, order_image_notesFindFirstArgs<ExtArgs>>): Prisma__order_image_notesClient<$Result.GetResult<Prisma.$order_image_notesPayload<ExtArgs>, T, "findFirst", ClientOptions> | null, null, ExtArgs, ClientOptions>
+
+    /**
+     * Find the first Order_image_notes that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {order_image_notesFindFirstOrThrowArgs} args - Arguments to find a Order_image_notes
+     * @example
+     * // Get one Order_image_notes
+     * const order_image_notes = await prisma.order_image_notes.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends order_image_notesFindFirstOrThrowArgs>(args?: SelectSubset<T, order_image_notesFindFirstOrThrowArgs<ExtArgs>>): Prisma__order_image_notesClient<$Result.GetResult<Prisma.$order_image_notesPayload<ExtArgs>, T, "findFirstOrThrow", ClientOptions>, never, ExtArgs, ClientOptions>
+
+    /**
+     * Find zero or more Order_image_notes that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {order_image_notesFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all Order_image_notes
+     * const order_image_notes = await prisma.order_image_notes.findMany()
+     * 
+     * // Get first 10 Order_image_notes
+     * const order_image_notes = await prisma.order_image_notes.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const order_image_notesWithIdOnly = await prisma.order_image_notes.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends order_image_notesFindManyArgs>(args?: SelectSubset<T, order_image_notesFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$order_image_notesPayload<ExtArgs>, T, "findMany", ClientOptions>>
+
+    /**
+     * Create a Order_image_notes.
+     * @param {order_image_notesCreateArgs} args - Arguments to create a Order_image_notes.
+     * @example
+     * // Create one Order_image_notes
+     * const Order_image_notes = await prisma.order_image_notes.create({
+     *   data: {
+     *     // ... data to create a Order_image_notes
+     *   }
+     * })
+     * 
+     */
+    create<T extends order_image_notesCreateArgs>(args: SelectSubset<T, order_image_notesCreateArgs<ExtArgs>>): Prisma__order_image_notesClient<$Result.GetResult<Prisma.$order_image_notesPayload<ExtArgs>, T, "create", ClientOptions>, never, ExtArgs, ClientOptions>
+
+    /**
+     * Create many Order_image_notes.
+     * @param {order_image_notesCreateManyArgs} args - Arguments to create many Order_image_notes.
+     * @example
+     * // Create many Order_image_notes
+     * const order_image_notes = await prisma.order_image_notes.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends order_image_notesCreateManyArgs>(args?: SelectSubset<T, order_image_notesCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Delete a Order_image_notes.
+     * @param {order_image_notesDeleteArgs} args - Arguments to delete one Order_image_notes.
+     * @example
+     * // Delete one Order_image_notes
+     * const Order_image_notes = await prisma.order_image_notes.delete({
+     *   where: {
+     *     // ... filter to delete one Order_image_notes
+     *   }
+     * })
+     * 
+     */
+    delete<T extends order_image_notesDeleteArgs>(args: SelectSubset<T, order_image_notesDeleteArgs<ExtArgs>>): Prisma__order_image_notesClient<$Result.GetResult<Prisma.$order_image_notesPayload<ExtArgs>, T, "delete", ClientOptions>, never, ExtArgs, ClientOptions>
+
+    /**
+     * Update one Order_image_notes.
+     * @param {order_image_notesUpdateArgs} args - Arguments to update one Order_image_notes.
+     * @example
+     * // Update one Order_image_notes
+     * const order_image_notes = await prisma.order_image_notes.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends order_image_notesUpdateArgs>(args: SelectSubset<T, order_image_notesUpdateArgs<ExtArgs>>): Prisma__order_image_notesClient<$Result.GetResult<Prisma.$order_image_notesPayload<ExtArgs>, T, "update", ClientOptions>, never, ExtArgs, ClientOptions>
+
+    /**
+     * Delete zero or more Order_image_notes.
+     * @param {order_image_notesDeleteManyArgs} args - Arguments to filter Order_image_notes to delete.
+     * @example
+     * // Delete a few Order_image_notes
+     * const { count } = await prisma.order_image_notes.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends order_image_notesDeleteManyArgs>(args?: SelectSubset<T, order_image_notesDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more Order_image_notes.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {order_image_notesUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many Order_image_notes
+     * const order_image_notes = await prisma.order_image_notes.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends order_image_notesUpdateManyArgs>(args: SelectSubset<T, order_image_notesUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create or update one Order_image_notes.
+     * @param {order_image_notesUpsertArgs} args - Arguments to update or create a Order_image_notes.
+     * @example
+     * // Update or create a Order_image_notes
+     * const order_image_notes = await prisma.order_image_notes.upsert({
+     *   create: {
+     *     // ... data to create a Order_image_notes
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the Order_image_notes we want to update
+     *   }
+     * })
+     */
+    upsert<T extends order_image_notesUpsertArgs>(args: SelectSubset<T, order_image_notesUpsertArgs<ExtArgs>>): Prisma__order_image_notesClient<$Result.GetResult<Prisma.$order_image_notesPayload<ExtArgs>, T, "upsert", ClientOptions>, never, ExtArgs, ClientOptions>
+
+
+    /**
+     * Count the number of Order_image_notes.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {order_image_notesCountArgs} args - Arguments to filter Order_image_notes to count.
+     * @example
+     * // Count the number of Order_image_notes
+     * const count = await prisma.order_image_notes.count({
+     *   where: {
+     *     // ... the filter for the Order_image_notes we want to count
+     *   }
+     * })
+    **/
+    count<T extends order_image_notesCountArgs>(
+      args?: Subset<T, order_image_notesCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], Order_image_notesCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a Order_image_notes.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {Order_image_notesAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends Order_image_notesAggregateArgs>(args: Subset<T, Order_image_notesAggregateArgs>): Prisma.PrismaPromise<GetOrder_image_notesAggregateType<T>>
+
+    /**
+     * Group by Order_image_notes.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {order_image_notesGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends order_image_notesGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: order_image_notesGroupByArgs['orderBy'] }
+        : { orderBy?: order_image_notesGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, order_image_notesGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetOrder_image_notesGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the order_image_notes model
+   */
+  readonly fields: order_image_notesFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for order_image_notes.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__order_image_notesClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, ClientOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the order_image_notes model
+   */ 
+  interface order_image_notesFieldRefs {
+    readonly id: FieldRef<"order_image_notes", 'String'>
+    readonly order_image_checklist_id: FieldRef<"order_image_notes", 'String'>
+    readonly filename: FieldRef<"order_image_notes", 'String'>
+    readonly status: FieldRef<"order_image_notes", 'Boolean'>
+    readonly notes: FieldRef<"order_image_notes", 'String'>
+    readonly notes_by: FieldRef<"order_image_notes", 'String'>
+    readonly updated_by: FieldRef<"order_image_notes", 'String'>
+    readonly created_by: FieldRef<"order_image_notes", 'String'>
+    readonly updated_at: FieldRef<"order_image_notes", 'DateTime'>
+    readonly created_at: FieldRef<"order_image_notes", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * order_image_notes findUnique
+   */
+  export type order_image_notesFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the order_image_notes
+     */
+    select?: order_image_notesSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the order_image_notes
+     */
+    omit?: order_image_notesOmit<ExtArgs> | null
+    /**
+     * Filter, which order_image_notes to fetch.
+     */
+    where: order_image_notesWhereUniqueInput
+  }
+
+  /**
+   * order_image_notes findUniqueOrThrow
+   */
+  export type order_image_notesFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the order_image_notes
+     */
+    select?: order_image_notesSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the order_image_notes
+     */
+    omit?: order_image_notesOmit<ExtArgs> | null
+    /**
+     * Filter, which order_image_notes to fetch.
+     */
+    where: order_image_notesWhereUniqueInput
+  }
+
+  /**
+   * order_image_notes findFirst
+   */
+  export type order_image_notesFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the order_image_notes
+     */
+    select?: order_image_notesSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the order_image_notes
+     */
+    omit?: order_image_notesOmit<ExtArgs> | null
+    /**
+     * Filter, which order_image_notes to fetch.
+     */
+    where?: order_image_notesWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of order_image_notes to fetch.
+     */
+    orderBy?: order_image_notesOrderByWithRelationInput | order_image_notesOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for order_image_notes.
+     */
+    cursor?: order_image_notesWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` order_image_notes from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` order_image_notes.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of order_image_notes.
+     */
+    distinct?: Order_image_notesScalarFieldEnum | Order_image_notesScalarFieldEnum[]
+  }
+
+  /**
+   * order_image_notes findFirstOrThrow
+   */
+  export type order_image_notesFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the order_image_notes
+     */
+    select?: order_image_notesSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the order_image_notes
+     */
+    omit?: order_image_notesOmit<ExtArgs> | null
+    /**
+     * Filter, which order_image_notes to fetch.
+     */
+    where?: order_image_notesWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of order_image_notes to fetch.
+     */
+    orderBy?: order_image_notesOrderByWithRelationInput | order_image_notesOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for order_image_notes.
+     */
+    cursor?: order_image_notesWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` order_image_notes from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` order_image_notes.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of order_image_notes.
+     */
+    distinct?: Order_image_notesScalarFieldEnum | Order_image_notesScalarFieldEnum[]
+  }
+
+  /**
+   * order_image_notes findMany
+   */
+  export type order_image_notesFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the order_image_notes
+     */
+    select?: order_image_notesSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the order_image_notes
+     */
+    omit?: order_image_notesOmit<ExtArgs> | null
+    /**
+     * Filter, which order_image_notes to fetch.
+     */
+    where?: order_image_notesWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of order_image_notes to fetch.
+     */
+    orderBy?: order_image_notesOrderByWithRelationInput | order_image_notesOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing order_image_notes.
+     */
+    cursor?: order_image_notesWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` order_image_notes from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` order_image_notes.
+     */
+    skip?: number
+    distinct?: Order_image_notesScalarFieldEnum | Order_image_notesScalarFieldEnum[]
+  }
+
+  /**
+   * order_image_notes create
+   */
+  export type order_image_notesCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the order_image_notes
+     */
+    select?: order_image_notesSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the order_image_notes
+     */
+    omit?: order_image_notesOmit<ExtArgs> | null
+    /**
+     * The data needed to create a order_image_notes.
+     */
+    data: XOR<order_image_notesCreateInput, order_image_notesUncheckedCreateInput>
+  }
+
+  /**
+   * order_image_notes createMany
+   */
+  export type order_image_notesCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many order_image_notes.
+     */
+    data: order_image_notesCreateManyInput | order_image_notesCreateManyInput[]
+  }
+
+  /**
+   * order_image_notes update
+   */
+  export type order_image_notesUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the order_image_notes
+     */
+    select?: order_image_notesSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the order_image_notes
+     */
+    omit?: order_image_notesOmit<ExtArgs> | null
+    /**
+     * The data needed to update a order_image_notes.
+     */
+    data: XOR<order_image_notesUpdateInput, order_image_notesUncheckedUpdateInput>
+    /**
+     * Choose, which order_image_notes to update.
+     */
+    where: order_image_notesWhereUniqueInput
+  }
+
+  /**
+   * order_image_notes updateMany
+   */
+  export type order_image_notesUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update order_image_notes.
+     */
+    data: XOR<order_image_notesUpdateManyMutationInput, order_image_notesUncheckedUpdateManyInput>
+    /**
+     * Filter which order_image_notes to update
+     */
+    where?: order_image_notesWhereInput
+    /**
+     * Limit how many order_image_notes to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * order_image_notes upsert
+   */
+  export type order_image_notesUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the order_image_notes
+     */
+    select?: order_image_notesSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the order_image_notes
+     */
+    omit?: order_image_notesOmit<ExtArgs> | null
+    /**
+     * The filter to search for the order_image_notes to update in case it exists.
+     */
+    where: order_image_notesWhereUniqueInput
+    /**
+     * In case the order_image_notes found by the `where` argument doesn't exist, create a new order_image_notes with this data.
+     */
+    create: XOR<order_image_notesCreateInput, order_image_notesUncheckedCreateInput>
+    /**
+     * In case the order_image_notes was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<order_image_notesUpdateInput, order_image_notesUncheckedUpdateInput>
+  }
+
+  /**
+   * order_image_notes delete
+   */
+  export type order_image_notesDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the order_image_notes
+     */
+    select?: order_image_notesSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the order_image_notes
+     */
+    omit?: order_image_notesOmit<ExtArgs> | null
+    /**
+     * Filter which order_image_notes to delete.
+     */
+    where: order_image_notesWhereUniqueInput
+  }
+
+  /**
+   * order_image_notes deleteMany
+   */
+  export type order_image_notesDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which order_image_notes to delete
+     */
+    where?: order_image_notesWhereInput
+    /**
+     * Limit how many order_image_notes to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * order_image_notes without action
+   */
+  export type order_image_notesDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the order_image_notes
+     */
+    select?: order_image_notesSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the order_image_notes
+     */
+    omit?: order_image_notesOmit<ExtArgs> | null
+  }
+
+
+  /**
    * Model sysdiagrams
    */
 
@@ -6269,6 +12317,96 @@ export namespace Prisma {
   export type Master_checklistsScalarFieldEnum = (typeof Master_checklistsScalarFieldEnum)[keyof typeof Master_checklistsScalarFieldEnum]
 
 
+  export const Master_image_checklistsScalarFieldEnum: {
+    id: 'id',
+    checklist_detail_id: 'checklist_detail_id',
+    filename: 'filename',
+    updated_by: 'updated_by',
+    created_by: 'created_by',
+    updated_at: 'updated_at',
+    created_at: 'created_at'
+  };
+
+  export type Master_image_checklistsScalarFieldEnum = (typeof Master_image_checklistsScalarFieldEnum)[keyof typeof Master_image_checklistsScalarFieldEnum]
+
+
+  export const Order_checklistsScalarFieldEnum: {
+    id: 'id',
+    checklist_id: 'checklist_id',
+    order_id: 'order_id',
+    model: 'model',
+    workcenter: 'workcenter',
+    status: 'status',
+    date_open: 'date_open',
+    date_closed: 'date_closed',
+    updated_by: 'updated_by',
+    created_by: 'created_by',
+    updated_at: 'updated_at',
+    created_at: 'created_at'
+  };
+
+  export type Order_checklistsScalarFieldEnum = (typeof Order_checklistsScalarFieldEnum)[keyof typeof Order_checklistsScalarFieldEnum]
+
+
+  export const Order_checklist_detailsScalarFieldEnum: {
+    id: 'id',
+    order_checklist_id: 'order_checklist_id',
+    checked: 'checked',
+    notes_by_prod: 'notes_by_prod',
+    notes_by_qc: 'notes_by_qc',
+    updated_by: 'updated_by',
+    created_by: 'created_by',
+    updated_at: 'updated_at',
+    created_at: 'created_at'
+  };
+
+  export type Order_checklist_detailsScalarFieldEnum = (typeof Order_checklist_detailsScalarFieldEnum)[keyof typeof Order_checklist_detailsScalarFieldEnum]
+
+
+  export const Order_checklist_notesScalarFieldEnum: {
+    id: 'id',
+    order_checklist_detail_id: 'order_checklist_detail_id',
+    checked_status: 'checked_status',
+    notes: 'notes',
+    notes_by: 'notes_by',
+    updated_by: 'updated_by',
+    created_by: 'created_by',
+    updated_at: 'updated_at',
+    created_at: 'created_at'
+  };
+
+  export type Order_checklist_notesScalarFieldEnum = (typeof Order_checklist_notesScalarFieldEnum)[keyof typeof Order_checklist_notesScalarFieldEnum]
+
+
+  export const Order_image_checklistsScalarFieldEnum: {
+    id: 'id',
+    order_checklist_detail_id: 'order_checklist_detail_id',
+    filename: 'filename',
+    updated_by: 'updated_by',
+    created_by: 'created_by',
+    updated_at: 'updated_at',
+    created_at: 'created_at'
+  };
+
+  export type Order_image_checklistsScalarFieldEnum = (typeof Order_image_checklistsScalarFieldEnum)[keyof typeof Order_image_checklistsScalarFieldEnum]
+
+
+  export const Order_image_notesScalarFieldEnum: {
+    id: 'id',
+    order_image_checklist_id: 'order_image_checklist_id',
+    filename: 'filename',
+    status: 'status',
+    notes: 'notes',
+    notes_by: 'notes_by',
+    updated_by: 'updated_by',
+    created_by: 'created_by',
+    updated_at: 'updated_at',
+    created_at: 'created_at'
+  };
+
+  export type Order_image_notesScalarFieldEnum = (typeof Order_image_notesScalarFieldEnum)[keyof typeof Order_image_notesScalarFieldEnum]
+
+
   export const SysdiagramsScalarFieldEnum: {
     name: 'name',
     principal_id: 'principal_id',
@@ -6662,6 +12800,438 @@ export namespace Prisma {
     created_by?: StringWithAggregatesFilter<"master_checklists"> | string
     updated_at?: DateTimeNullableWithAggregatesFilter<"master_checklists"> | Date | string | null
     created_at?: DateTimeNullableWithAggregatesFilter<"master_checklists"> | Date | string | null
+  }
+
+  export type master_image_checklistsWhereInput = {
+    AND?: master_image_checklistsWhereInput | master_image_checklistsWhereInput[]
+    OR?: master_image_checklistsWhereInput[]
+    NOT?: master_image_checklistsWhereInput | master_image_checklistsWhereInput[]
+    id?: StringFilter<"master_image_checklists"> | string
+    checklist_detail_id?: StringFilter<"master_image_checklists"> | string
+    filename?: StringFilter<"master_image_checklists"> | string
+    updated_by?: StringFilter<"master_image_checklists"> | string
+    created_by?: StringFilter<"master_image_checklists"> | string
+    updated_at?: DateTimeNullableFilter<"master_image_checklists"> | Date | string | null
+    created_at?: DateTimeNullableFilter<"master_image_checklists"> | Date | string | null
+  }
+
+  export type master_image_checklistsOrderByWithRelationInput = {
+    id?: SortOrder
+    checklist_detail_id?: SortOrder
+    filename?: SortOrder
+    updated_by?: SortOrder
+    created_by?: SortOrder
+    updated_at?: SortOrderInput | SortOrder
+    created_at?: SortOrderInput | SortOrder
+  }
+
+  export type master_image_checklistsWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: master_image_checklistsWhereInput | master_image_checklistsWhereInput[]
+    OR?: master_image_checklistsWhereInput[]
+    NOT?: master_image_checklistsWhereInput | master_image_checklistsWhereInput[]
+    checklist_detail_id?: StringFilter<"master_image_checklists"> | string
+    filename?: StringFilter<"master_image_checklists"> | string
+    updated_by?: StringFilter<"master_image_checklists"> | string
+    created_by?: StringFilter<"master_image_checklists"> | string
+    updated_at?: DateTimeNullableFilter<"master_image_checklists"> | Date | string | null
+    created_at?: DateTimeNullableFilter<"master_image_checklists"> | Date | string | null
+  }, "id">
+
+  export type master_image_checklistsOrderByWithAggregationInput = {
+    id?: SortOrder
+    checklist_detail_id?: SortOrder
+    filename?: SortOrder
+    updated_by?: SortOrder
+    created_by?: SortOrder
+    updated_at?: SortOrderInput | SortOrder
+    created_at?: SortOrderInput | SortOrder
+    _count?: master_image_checklistsCountOrderByAggregateInput
+    _max?: master_image_checklistsMaxOrderByAggregateInput
+    _min?: master_image_checklistsMinOrderByAggregateInput
+  }
+
+  export type master_image_checklistsScalarWhereWithAggregatesInput = {
+    AND?: master_image_checklistsScalarWhereWithAggregatesInput | master_image_checklistsScalarWhereWithAggregatesInput[]
+    OR?: master_image_checklistsScalarWhereWithAggregatesInput[]
+    NOT?: master_image_checklistsScalarWhereWithAggregatesInput | master_image_checklistsScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"master_image_checklists"> | string
+    checklist_detail_id?: StringWithAggregatesFilter<"master_image_checklists"> | string
+    filename?: StringWithAggregatesFilter<"master_image_checklists"> | string
+    updated_by?: StringWithAggregatesFilter<"master_image_checklists"> | string
+    created_by?: StringWithAggregatesFilter<"master_image_checklists"> | string
+    updated_at?: DateTimeNullableWithAggregatesFilter<"master_image_checklists"> | Date | string | null
+    created_at?: DateTimeNullableWithAggregatesFilter<"master_image_checklists"> | Date | string | null
+  }
+
+  export type order_checklistsWhereInput = {
+    AND?: order_checklistsWhereInput | order_checklistsWhereInput[]
+    OR?: order_checklistsWhereInput[]
+    NOT?: order_checklistsWhereInput | order_checklistsWhereInput[]
+    id?: StringFilter<"order_checklists"> | string
+    checklist_id?: StringFilter<"order_checklists"> | string
+    order_id?: StringFilter<"order_checklists"> | string
+    model?: StringFilter<"order_checklists"> | string
+    workcenter?: StringFilter<"order_checklists"> | string
+    status?: BoolFilter<"order_checklists"> | boolean
+    date_open?: DateTimeNullableFilter<"order_checklists"> | Date | string | null
+    date_closed?: DateTimeNullableFilter<"order_checklists"> | Date | string | null
+    updated_by?: StringFilter<"order_checklists"> | string
+    created_by?: StringFilter<"order_checklists"> | string
+    updated_at?: DateTimeNullableFilter<"order_checklists"> | Date | string | null
+    created_at?: DateTimeNullableFilter<"order_checklists"> | Date | string | null
+  }
+
+  export type order_checklistsOrderByWithRelationInput = {
+    id?: SortOrder
+    checklist_id?: SortOrder
+    order_id?: SortOrder
+    model?: SortOrder
+    workcenter?: SortOrder
+    status?: SortOrder
+    date_open?: SortOrderInput | SortOrder
+    date_closed?: SortOrderInput | SortOrder
+    updated_by?: SortOrder
+    created_by?: SortOrder
+    updated_at?: SortOrderInput | SortOrder
+    created_at?: SortOrderInput | SortOrder
+  }
+
+  export type order_checklistsWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: order_checklistsWhereInput | order_checklistsWhereInput[]
+    OR?: order_checklistsWhereInput[]
+    NOT?: order_checklistsWhereInput | order_checklistsWhereInput[]
+    checklist_id?: StringFilter<"order_checklists"> | string
+    order_id?: StringFilter<"order_checklists"> | string
+    model?: StringFilter<"order_checklists"> | string
+    workcenter?: StringFilter<"order_checklists"> | string
+    status?: BoolFilter<"order_checklists"> | boolean
+    date_open?: DateTimeNullableFilter<"order_checklists"> | Date | string | null
+    date_closed?: DateTimeNullableFilter<"order_checklists"> | Date | string | null
+    updated_by?: StringFilter<"order_checklists"> | string
+    created_by?: StringFilter<"order_checklists"> | string
+    updated_at?: DateTimeNullableFilter<"order_checklists"> | Date | string | null
+    created_at?: DateTimeNullableFilter<"order_checklists"> | Date | string | null
+  }, "id">
+
+  export type order_checklistsOrderByWithAggregationInput = {
+    id?: SortOrder
+    checklist_id?: SortOrder
+    order_id?: SortOrder
+    model?: SortOrder
+    workcenter?: SortOrder
+    status?: SortOrder
+    date_open?: SortOrderInput | SortOrder
+    date_closed?: SortOrderInput | SortOrder
+    updated_by?: SortOrder
+    created_by?: SortOrder
+    updated_at?: SortOrderInput | SortOrder
+    created_at?: SortOrderInput | SortOrder
+    _count?: order_checklistsCountOrderByAggregateInput
+    _max?: order_checklistsMaxOrderByAggregateInput
+    _min?: order_checklistsMinOrderByAggregateInput
+  }
+
+  export type order_checklistsScalarWhereWithAggregatesInput = {
+    AND?: order_checklistsScalarWhereWithAggregatesInput | order_checklistsScalarWhereWithAggregatesInput[]
+    OR?: order_checklistsScalarWhereWithAggregatesInput[]
+    NOT?: order_checklistsScalarWhereWithAggregatesInput | order_checklistsScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"order_checklists"> | string
+    checklist_id?: StringWithAggregatesFilter<"order_checklists"> | string
+    order_id?: StringWithAggregatesFilter<"order_checklists"> | string
+    model?: StringWithAggregatesFilter<"order_checklists"> | string
+    workcenter?: StringWithAggregatesFilter<"order_checklists"> | string
+    status?: BoolWithAggregatesFilter<"order_checklists"> | boolean
+    date_open?: DateTimeNullableWithAggregatesFilter<"order_checklists"> | Date | string | null
+    date_closed?: DateTimeNullableWithAggregatesFilter<"order_checklists"> | Date | string | null
+    updated_by?: StringWithAggregatesFilter<"order_checklists"> | string
+    created_by?: StringWithAggregatesFilter<"order_checklists"> | string
+    updated_at?: DateTimeNullableWithAggregatesFilter<"order_checklists"> | Date | string | null
+    created_at?: DateTimeNullableWithAggregatesFilter<"order_checklists"> | Date | string | null
+  }
+
+  export type order_checklist_detailsWhereInput = {
+    AND?: order_checklist_detailsWhereInput | order_checklist_detailsWhereInput[]
+    OR?: order_checklist_detailsWhereInput[]
+    NOT?: order_checklist_detailsWhereInput | order_checklist_detailsWhereInput[]
+    id?: StringFilter<"order_checklist_details"> | string
+    order_checklist_id?: StringFilter<"order_checklist_details"> | string
+    checked?: BoolFilter<"order_checklist_details"> | boolean
+    notes_by_prod?: StringFilter<"order_checklist_details"> | string
+    notes_by_qc?: StringFilter<"order_checklist_details"> | string
+    updated_by?: StringFilter<"order_checklist_details"> | string
+    created_by?: StringFilter<"order_checklist_details"> | string
+    updated_at?: DateTimeNullableFilter<"order_checklist_details"> | Date | string | null
+    created_at?: DateTimeNullableFilter<"order_checklist_details"> | Date | string | null
+  }
+
+  export type order_checklist_detailsOrderByWithRelationInput = {
+    id?: SortOrder
+    order_checklist_id?: SortOrder
+    checked?: SortOrder
+    notes_by_prod?: SortOrder
+    notes_by_qc?: SortOrder
+    updated_by?: SortOrder
+    created_by?: SortOrder
+    updated_at?: SortOrderInput | SortOrder
+    created_at?: SortOrderInput | SortOrder
+  }
+
+  export type order_checklist_detailsWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: order_checklist_detailsWhereInput | order_checklist_detailsWhereInput[]
+    OR?: order_checklist_detailsWhereInput[]
+    NOT?: order_checklist_detailsWhereInput | order_checklist_detailsWhereInput[]
+    order_checklist_id?: StringFilter<"order_checklist_details"> | string
+    checked?: BoolFilter<"order_checklist_details"> | boolean
+    notes_by_prod?: StringFilter<"order_checklist_details"> | string
+    notes_by_qc?: StringFilter<"order_checklist_details"> | string
+    updated_by?: StringFilter<"order_checklist_details"> | string
+    created_by?: StringFilter<"order_checklist_details"> | string
+    updated_at?: DateTimeNullableFilter<"order_checklist_details"> | Date | string | null
+    created_at?: DateTimeNullableFilter<"order_checklist_details"> | Date | string | null
+  }, "id">
+
+  export type order_checklist_detailsOrderByWithAggregationInput = {
+    id?: SortOrder
+    order_checklist_id?: SortOrder
+    checked?: SortOrder
+    notes_by_prod?: SortOrder
+    notes_by_qc?: SortOrder
+    updated_by?: SortOrder
+    created_by?: SortOrder
+    updated_at?: SortOrderInput | SortOrder
+    created_at?: SortOrderInput | SortOrder
+    _count?: order_checklist_detailsCountOrderByAggregateInput
+    _max?: order_checklist_detailsMaxOrderByAggregateInput
+    _min?: order_checklist_detailsMinOrderByAggregateInput
+  }
+
+  export type order_checklist_detailsScalarWhereWithAggregatesInput = {
+    AND?: order_checklist_detailsScalarWhereWithAggregatesInput | order_checklist_detailsScalarWhereWithAggregatesInput[]
+    OR?: order_checklist_detailsScalarWhereWithAggregatesInput[]
+    NOT?: order_checklist_detailsScalarWhereWithAggregatesInput | order_checklist_detailsScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"order_checklist_details"> | string
+    order_checklist_id?: StringWithAggregatesFilter<"order_checklist_details"> | string
+    checked?: BoolWithAggregatesFilter<"order_checklist_details"> | boolean
+    notes_by_prod?: StringWithAggregatesFilter<"order_checklist_details"> | string
+    notes_by_qc?: StringWithAggregatesFilter<"order_checklist_details"> | string
+    updated_by?: StringWithAggregatesFilter<"order_checklist_details"> | string
+    created_by?: StringWithAggregatesFilter<"order_checklist_details"> | string
+    updated_at?: DateTimeNullableWithAggregatesFilter<"order_checklist_details"> | Date | string | null
+    created_at?: DateTimeNullableWithAggregatesFilter<"order_checklist_details"> | Date | string | null
+  }
+
+  export type order_checklist_notesWhereInput = {
+    AND?: order_checklist_notesWhereInput | order_checklist_notesWhereInput[]
+    OR?: order_checklist_notesWhereInput[]
+    NOT?: order_checklist_notesWhereInput | order_checklist_notesWhereInput[]
+    id?: StringFilter<"order_checklist_notes"> | string
+    order_checklist_detail_id?: StringFilter<"order_checklist_notes"> | string
+    checked_status?: BoolFilter<"order_checklist_notes"> | boolean
+    notes?: StringFilter<"order_checklist_notes"> | string
+    notes_by?: StringFilter<"order_checklist_notes"> | string
+    updated_by?: StringFilter<"order_checklist_notes"> | string
+    created_by?: StringFilter<"order_checklist_notes"> | string
+    updated_at?: DateTimeNullableFilter<"order_checklist_notes"> | Date | string | null
+    created_at?: DateTimeNullableFilter<"order_checklist_notes"> | Date | string | null
+  }
+
+  export type order_checklist_notesOrderByWithRelationInput = {
+    id?: SortOrder
+    order_checklist_detail_id?: SortOrder
+    checked_status?: SortOrder
+    notes?: SortOrder
+    notes_by?: SortOrder
+    updated_by?: SortOrder
+    created_by?: SortOrder
+    updated_at?: SortOrderInput | SortOrder
+    created_at?: SortOrderInput | SortOrder
+  }
+
+  export type order_checklist_notesWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: order_checklist_notesWhereInput | order_checklist_notesWhereInput[]
+    OR?: order_checklist_notesWhereInput[]
+    NOT?: order_checklist_notesWhereInput | order_checklist_notesWhereInput[]
+    order_checklist_detail_id?: StringFilter<"order_checklist_notes"> | string
+    checked_status?: BoolFilter<"order_checklist_notes"> | boolean
+    notes?: StringFilter<"order_checklist_notes"> | string
+    notes_by?: StringFilter<"order_checklist_notes"> | string
+    updated_by?: StringFilter<"order_checklist_notes"> | string
+    created_by?: StringFilter<"order_checklist_notes"> | string
+    updated_at?: DateTimeNullableFilter<"order_checklist_notes"> | Date | string | null
+    created_at?: DateTimeNullableFilter<"order_checklist_notes"> | Date | string | null
+  }, "id">
+
+  export type order_checklist_notesOrderByWithAggregationInput = {
+    id?: SortOrder
+    order_checklist_detail_id?: SortOrder
+    checked_status?: SortOrder
+    notes?: SortOrder
+    notes_by?: SortOrder
+    updated_by?: SortOrder
+    created_by?: SortOrder
+    updated_at?: SortOrderInput | SortOrder
+    created_at?: SortOrderInput | SortOrder
+    _count?: order_checklist_notesCountOrderByAggregateInput
+    _max?: order_checklist_notesMaxOrderByAggregateInput
+    _min?: order_checklist_notesMinOrderByAggregateInput
+  }
+
+  export type order_checklist_notesScalarWhereWithAggregatesInput = {
+    AND?: order_checklist_notesScalarWhereWithAggregatesInput | order_checklist_notesScalarWhereWithAggregatesInput[]
+    OR?: order_checklist_notesScalarWhereWithAggregatesInput[]
+    NOT?: order_checklist_notesScalarWhereWithAggregatesInput | order_checklist_notesScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"order_checklist_notes"> | string
+    order_checklist_detail_id?: StringWithAggregatesFilter<"order_checklist_notes"> | string
+    checked_status?: BoolWithAggregatesFilter<"order_checklist_notes"> | boolean
+    notes?: StringWithAggregatesFilter<"order_checklist_notes"> | string
+    notes_by?: StringWithAggregatesFilter<"order_checklist_notes"> | string
+    updated_by?: StringWithAggregatesFilter<"order_checklist_notes"> | string
+    created_by?: StringWithAggregatesFilter<"order_checklist_notes"> | string
+    updated_at?: DateTimeNullableWithAggregatesFilter<"order_checklist_notes"> | Date | string | null
+    created_at?: DateTimeNullableWithAggregatesFilter<"order_checklist_notes"> | Date | string | null
+  }
+
+  export type order_image_checklistsWhereInput = {
+    AND?: order_image_checklistsWhereInput | order_image_checklistsWhereInput[]
+    OR?: order_image_checklistsWhereInput[]
+    NOT?: order_image_checklistsWhereInput | order_image_checklistsWhereInput[]
+    id?: StringFilter<"order_image_checklists"> | string
+    order_checklist_detail_id?: StringFilter<"order_image_checklists"> | string
+    filename?: StringFilter<"order_image_checklists"> | string
+    updated_by?: StringFilter<"order_image_checklists"> | string
+    created_by?: StringFilter<"order_image_checklists"> | string
+    updated_at?: DateTimeNullableFilter<"order_image_checklists"> | Date | string | null
+    created_at?: DateTimeNullableFilter<"order_image_checklists"> | Date | string | null
+  }
+
+  export type order_image_checklistsOrderByWithRelationInput = {
+    id?: SortOrder
+    order_checklist_detail_id?: SortOrder
+    filename?: SortOrder
+    updated_by?: SortOrder
+    created_by?: SortOrder
+    updated_at?: SortOrderInput | SortOrder
+    created_at?: SortOrderInput | SortOrder
+  }
+
+  export type order_image_checklistsWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: order_image_checklistsWhereInput | order_image_checklistsWhereInput[]
+    OR?: order_image_checklistsWhereInput[]
+    NOT?: order_image_checklistsWhereInput | order_image_checklistsWhereInput[]
+    order_checklist_detail_id?: StringFilter<"order_image_checklists"> | string
+    filename?: StringFilter<"order_image_checklists"> | string
+    updated_by?: StringFilter<"order_image_checklists"> | string
+    created_by?: StringFilter<"order_image_checklists"> | string
+    updated_at?: DateTimeNullableFilter<"order_image_checklists"> | Date | string | null
+    created_at?: DateTimeNullableFilter<"order_image_checklists"> | Date | string | null
+  }, "id">
+
+  export type order_image_checklistsOrderByWithAggregationInput = {
+    id?: SortOrder
+    order_checklist_detail_id?: SortOrder
+    filename?: SortOrder
+    updated_by?: SortOrder
+    created_by?: SortOrder
+    updated_at?: SortOrderInput | SortOrder
+    created_at?: SortOrderInput | SortOrder
+    _count?: order_image_checklistsCountOrderByAggregateInput
+    _max?: order_image_checklistsMaxOrderByAggregateInput
+    _min?: order_image_checklistsMinOrderByAggregateInput
+  }
+
+  export type order_image_checklistsScalarWhereWithAggregatesInput = {
+    AND?: order_image_checklistsScalarWhereWithAggregatesInput | order_image_checklistsScalarWhereWithAggregatesInput[]
+    OR?: order_image_checklistsScalarWhereWithAggregatesInput[]
+    NOT?: order_image_checklistsScalarWhereWithAggregatesInput | order_image_checklistsScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"order_image_checklists"> | string
+    order_checklist_detail_id?: StringWithAggregatesFilter<"order_image_checklists"> | string
+    filename?: StringWithAggregatesFilter<"order_image_checklists"> | string
+    updated_by?: StringWithAggregatesFilter<"order_image_checklists"> | string
+    created_by?: StringWithAggregatesFilter<"order_image_checklists"> | string
+    updated_at?: DateTimeNullableWithAggregatesFilter<"order_image_checklists"> | Date | string | null
+    created_at?: DateTimeNullableWithAggregatesFilter<"order_image_checklists"> | Date | string | null
+  }
+
+  export type order_image_notesWhereInput = {
+    AND?: order_image_notesWhereInput | order_image_notesWhereInput[]
+    OR?: order_image_notesWhereInput[]
+    NOT?: order_image_notesWhereInput | order_image_notesWhereInput[]
+    id?: StringFilter<"order_image_notes"> | string
+    order_image_checklist_id?: StringFilter<"order_image_notes"> | string
+    filename?: StringFilter<"order_image_notes"> | string
+    status?: BoolFilter<"order_image_notes"> | boolean
+    notes?: StringFilter<"order_image_notes"> | string
+    notes_by?: StringFilter<"order_image_notes"> | string
+    updated_by?: StringFilter<"order_image_notes"> | string
+    created_by?: StringFilter<"order_image_notes"> | string
+    updated_at?: DateTimeNullableFilter<"order_image_notes"> | Date | string | null
+    created_at?: DateTimeNullableFilter<"order_image_notes"> | Date | string | null
+  }
+
+  export type order_image_notesOrderByWithRelationInput = {
+    id?: SortOrder
+    order_image_checklist_id?: SortOrder
+    filename?: SortOrder
+    status?: SortOrder
+    notes?: SortOrder
+    notes_by?: SortOrder
+    updated_by?: SortOrder
+    created_by?: SortOrder
+    updated_at?: SortOrderInput | SortOrder
+    created_at?: SortOrderInput | SortOrder
+  }
+
+  export type order_image_notesWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: order_image_notesWhereInput | order_image_notesWhereInput[]
+    OR?: order_image_notesWhereInput[]
+    NOT?: order_image_notesWhereInput | order_image_notesWhereInput[]
+    order_image_checklist_id?: StringFilter<"order_image_notes"> | string
+    filename?: StringFilter<"order_image_notes"> | string
+    status?: BoolFilter<"order_image_notes"> | boolean
+    notes?: StringFilter<"order_image_notes"> | string
+    notes_by?: StringFilter<"order_image_notes"> | string
+    updated_by?: StringFilter<"order_image_notes"> | string
+    created_by?: StringFilter<"order_image_notes"> | string
+    updated_at?: DateTimeNullableFilter<"order_image_notes"> | Date | string | null
+    created_at?: DateTimeNullableFilter<"order_image_notes"> | Date | string | null
+  }, "id">
+
+  export type order_image_notesOrderByWithAggregationInput = {
+    id?: SortOrder
+    order_image_checklist_id?: SortOrder
+    filename?: SortOrder
+    status?: SortOrder
+    notes?: SortOrder
+    notes_by?: SortOrder
+    updated_by?: SortOrder
+    created_by?: SortOrder
+    updated_at?: SortOrderInput | SortOrder
+    created_at?: SortOrderInput | SortOrder
+    _count?: order_image_notesCountOrderByAggregateInput
+    _max?: order_image_notesMaxOrderByAggregateInput
+    _min?: order_image_notesMinOrderByAggregateInput
+  }
+
+  export type order_image_notesScalarWhereWithAggregatesInput = {
+    AND?: order_image_notesScalarWhereWithAggregatesInput | order_image_notesScalarWhereWithAggregatesInput[]
+    OR?: order_image_notesScalarWhereWithAggregatesInput[]
+    NOT?: order_image_notesScalarWhereWithAggregatesInput | order_image_notesScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"order_image_notes"> | string
+    order_image_checklist_id?: StringWithAggregatesFilter<"order_image_notes"> | string
+    filename?: StringWithAggregatesFilter<"order_image_notes"> | string
+    status?: BoolWithAggregatesFilter<"order_image_notes"> | boolean
+    notes?: StringWithAggregatesFilter<"order_image_notes"> | string
+    notes_by?: StringWithAggregatesFilter<"order_image_notes"> | string
+    updated_by?: StringWithAggregatesFilter<"order_image_notes"> | string
+    created_by?: StringWithAggregatesFilter<"order_image_notes"> | string
+    updated_at?: DateTimeNullableWithAggregatesFilter<"order_image_notes"> | Date | string | null
+    created_at?: DateTimeNullableWithAggregatesFilter<"order_image_notes"> | Date | string | null
   }
 
   export type sysdiagramsWhereInput = {
@@ -7070,6 +13640,510 @@ export namespace Prisma {
     created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   }
 
+  export type master_image_checklistsCreateInput = {
+    id?: string
+    checklist_detail_id: string
+    filename: string
+    updated_by: string
+    created_by: string
+    updated_at?: Date | string | null
+    created_at?: Date | string | null
+  }
+
+  export type master_image_checklistsUncheckedCreateInput = {
+    id?: string
+    checklist_detail_id: string
+    filename: string
+    updated_by: string
+    created_by: string
+    updated_at?: Date | string | null
+    created_at?: Date | string | null
+  }
+
+  export type master_image_checklistsUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    checklist_detail_id?: StringFieldUpdateOperationsInput | string
+    filename?: StringFieldUpdateOperationsInput | string
+    updated_by?: StringFieldUpdateOperationsInput | string
+    created_by?: StringFieldUpdateOperationsInput | string
+    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  }
+
+  export type master_image_checklistsUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    checklist_detail_id?: StringFieldUpdateOperationsInput | string
+    filename?: StringFieldUpdateOperationsInput | string
+    updated_by?: StringFieldUpdateOperationsInput | string
+    created_by?: StringFieldUpdateOperationsInput | string
+    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  }
+
+  export type master_image_checklistsCreateManyInput = {
+    id?: string
+    checklist_detail_id: string
+    filename: string
+    updated_by: string
+    created_by: string
+    updated_at?: Date | string | null
+    created_at?: Date | string | null
+  }
+
+  export type master_image_checklistsUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    checklist_detail_id?: StringFieldUpdateOperationsInput | string
+    filename?: StringFieldUpdateOperationsInput | string
+    updated_by?: StringFieldUpdateOperationsInput | string
+    created_by?: StringFieldUpdateOperationsInput | string
+    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  }
+
+  export type master_image_checklistsUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    checklist_detail_id?: StringFieldUpdateOperationsInput | string
+    filename?: StringFieldUpdateOperationsInput | string
+    updated_by?: StringFieldUpdateOperationsInput | string
+    created_by?: StringFieldUpdateOperationsInput | string
+    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  }
+
+  export type order_checklistsCreateInput = {
+    id?: string
+    checklist_id: string
+    order_id: string
+    model: string
+    workcenter: string
+    status: boolean
+    date_open?: Date | string | null
+    date_closed?: Date | string | null
+    updated_by: string
+    created_by: string
+    updated_at?: Date | string | null
+    created_at?: Date | string | null
+  }
+
+  export type order_checklistsUncheckedCreateInput = {
+    id?: string
+    checklist_id: string
+    order_id: string
+    model: string
+    workcenter: string
+    status: boolean
+    date_open?: Date | string | null
+    date_closed?: Date | string | null
+    updated_by: string
+    created_by: string
+    updated_at?: Date | string | null
+    created_at?: Date | string | null
+  }
+
+  export type order_checklistsUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    checklist_id?: StringFieldUpdateOperationsInput | string
+    order_id?: StringFieldUpdateOperationsInput | string
+    model?: StringFieldUpdateOperationsInput | string
+    workcenter?: StringFieldUpdateOperationsInput | string
+    status?: BoolFieldUpdateOperationsInput | boolean
+    date_open?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    date_closed?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    updated_by?: StringFieldUpdateOperationsInput | string
+    created_by?: StringFieldUpdateOperationsInput | string
+    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  }
+
+  export type order_checklistsUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    checklist_id?: StringFieldUpdateOperationsInput | string
+    order_id?: StringFieldUpdateOperationsInput | string
+    model?: StringFieldUpdateOperationsInput | string
+    workcenter?: StringFieldUpdateOperationsInput | string
+    status?: BoolFieldUpdateOperationsInput | boolean
+    date_open?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    date_closed?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    updated_by?: StringFieldUpdateOperationsInput | string
+    created_by?: StringFieldUpdateOperationsInput | string
+    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  }
+
+  export type order_checklistsCreateManyInput = {
+    id?: string
+    checklist_id: string
+    order_id: string
+    model: string
+    workcenter: string
+    status: boolean
+    date_open?: Date | string | null
+    date_closed?: Date | string | null
+    updated_by: string
+    created_by: string
+    updated_at?: Date | string | null
+    created_at?: Date | string | null
+  }
+
+  export type order_checklistsUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    checklist_id?: StringFieldUpdateOperationsInput | string
+    order_id?: StringFieldUpdateOperationsInput | string
+    model?: StringFieldUpdateOperationsInput | string
+    workcenter?: StringFieldUpdateOperationsInput | string
+    status?: BoolFieldUpdateOperationsInput | boolean
+    date_open?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    date_closed?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    updated_by?: StringFieldUpdateOperationsInput | string
+    created_by?: StringFieldUpdateOperationsInput | string
+    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  }
+
+  export type order_checklistsUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    checklist_id?: StringFieldUpdateOperationsInput | string
+    order_id?: StringFieldUpdateOperationsInput | string
+    model?: StringFieldUpdateOperationsInput | string
+    workcenter?: StringFieldUpdateOperationsInput | string
+    status?: BoolFieldUpdateOperationsInput | boolean
+    date_open?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    date_closed?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    updated_by?: StringFieldUpdateOperationsInput | string
+    created_by?: StringFieldUpdateOperationsInput | string
+    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  }
+
+  export type order_checklist_detailsCreateInput = {
+    id?: string
+    order_checklist_id: string
+    checked: boolean
+    notes_by_prod: string
+    notes_by_qc: string
+    updated_by: string
+    created_by: string
+    updated_at?: Date | string | null
+    created_at?: Date | string | null
+  }
+
+  export type order_checklist_detailsUncheckedCreateInput = {
+    id?: string
+    order_checklist_id: string
+    checked: boolean
+    notes_by_prod: string
+    notes_by_qc: string
+    updated_by: string
+    created_by: string
+    updated_at?: Date | string | null
+    created_at?: Date | string | null
+  }
+
+  export type order_checklist_detailsUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    order_checklist_id?: StringFieldUpdateOperationsInput | string
+    checked?: BoolFieldUpdateOperationsInput | boolean
+    notes_by_prod?: StringFieldUpdateOperationsInput | string
+    notes_by_qc?: StringFieldUpdateOperationsInput | string
+    updated_by?: StringFieldUpdateOperationsInput | string
+    created_by?: StringFieldUpdateOperationsInput | string
+    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  }
+
+  export type order_checklist_detailsUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    order_checklist_id?: StringFieldUpdateOperationsInput | string
+    checked?: BoolFieldUpdateOperationsInput | boolean
+    notes_by_prod?: StringFieldUpdateOperationsInput | string
+    notes_by_qc?: StringFieldUpdateOperationsInput | string
+    updated_by?: StringFieldUpdateOperationsInput | string
+    created_by?: StringFieldUpdateOperationsInput | string
+    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  }
+
+  export type order_checklist_detailsCreateManyInput = {
+    id?: string
+    order_checklist_id: string
+    checked: boolean
+    notes_by_prod: string
+    notes_by_qc: string
+    updated_by: string
+    created_by: string
+    updated_at?: Date | string | null
+    created_at?: Date | string | null
+  }
+
+  export type order_checklist_detailsUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    order_checklist_id?: StringFieldUpdateOperationsInput | string
+    checked?: BoolFieldUpdateOperationsInput | boolean
+    notes_by_prod?: StringFieldUpdateOperationsInput | string
+    notes_by_qc?: StringFieldUpdateOperationsInput | string
+    updated_by?: StringFieldUpdateOperationsInput | string
+    created_by?: StringFieldUpdateOperationsInput | string
+    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  }
+
+  export type order_checklist_detailsUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    order_checklist_id?: StringFieldUpdateOperationsInput | string
+    checked?: BoolFieldUpdateOperationsInput | boolean
+    notes_by_prod?: StringFieldUpdateOperationsInput | string
+    notes_by_qc?: StringFieldUpdateOperationsInput | string
+    updated_by?: StringFieldUpdateOperationsInput | string
+    created_by?: StringFieldUpdateOperationsInput | string
+    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  }
+
+  export type order_checklist_notesCreateInput = {
+    id?: string
+    order_checklist_detail_id: string
+    checked_status: boolean
+    notes: string
+    notes_by: string
+    updated_by: string
+    created_by: string
+    updated_at?: Date | string | null
+    created_at?: Date | string | null
+  }
+
+  export type order_checklist_notesUncheckedCreateInput = {
+    id?: string
+    order_checklist_detail_id: string
+    checked_status: boolean
+    notes: string
+    notes_by: string
+    updated_by: string
+    created_by: string
+    updated_at?: Date | string | null
+    created_at?: Date | string | null
+  }
+
+  export type order_checklist_notesUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    order_checklist_detail_id?: StringFieldUpdateOperationsInput | string
+    checked_status?: BoolFieldUpdateOperationsInput | boolean
+    notes?: StringFieldUpdateOperationsInput | string
+    notes_by?: StringFieldUpdateOperationsInput | string
+    updated_by?: StringFieldUpdateOperationsInput | string
+    created_by?: StringFieldUpdateOperationsInput | string
+    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  }
+
+  export type order_checklist_notesUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    order_checklist_detail_id?: StringFieldUpdateOperationsInput | string
+    checked_status?: BoolFieldUpdateOperationsInput | boolean
+    notes?: StringFieldUpdateOperationsInput | string
+    notes_by?: StringFieldUpdateOperationsInput | string
+    updated_by?: StringFieldUpdateOperationsInput | string
+    created_by?: StringFieldUpdateOperationsInput | string
+    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  }
+
+  export type order_checklist_notesCreateManyInput = {
+    id?: string
+    order_checklist_detail_id: string
+    checked_status: boolean
+    notes: string
+    notes_by: string
+    updated_by: string
+    created_by: string
+    updated_at?: Date | string | null
+    created_at?: Date | string | null
+  }
+
+  export type order_checklist_notesUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    order_checklist_detail_id?: StringFieldUpdateOperationsInput | string
+    checked_status?: BoolFieldUpdateOperationsInput | boolean
+    notes?: StringFieldUpdateOperationsInput | string
+    notes_by?: StringFieldUpdateOperationsInput | string
+    updated_by?: StringFieldUpdateOperationsInput | string
+    created_by?: StringFieldUpdateOperationsInput | string
+    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  }
+
+  export type order_checklist_notesUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    order_checklist_detail_id?: StringFieldUpdateOperationsInput | string
+    checked_status?: BoolFieldUpdateOperationsInput | boolean
+    notes?: StringFieldUpdateOperationsInput | string
+    notes_by?: StringFieldUpdateOperationsInput | string
+    updated_by?: StringFieldUpdateOperationsInput | string
+    created_by?: StringFieldUpdateOperationsInput | string
+    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  }
+
+  export type order_image_checklistsCreateInput = {
+    id?: string
+    order_checklist_detail_id: string
+    filename: string
+    updated_by: string
+    created_by: string
+    updated_at?: Date | string | null
+    created_at?: Date | string | null
+  }
+
+  export type order_image_checklistsUncheckedCreateInput = {
+    id?: string
+    order_checklist_detail_id: string
+    filename: string
+    updated_by: string
+    created_by: string
+    updated_at?: Date | string | null
+    created_at?: Date | string | null
+  }
+
+  export type order_image_checklistsUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    order_checklist_detail_id?: StringFieldUpdateOperationsInput | string
+    filename?: StringFieldUpdateOperationsInput | string
+    updated_by?: StringFieldUpdateOperationsInput | string
+    created_by?: StringFieldUpdateOperationsInput | string
+    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  }
+
+  export type order_image_checklistsUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    order_checklist_detail_id?: StringFieldUpdateOperationsInput | string
+    filename?: StringFieldUpdateOperationsInput | string
+    updated_by?: StringFieldUpdateOperationsInput | string
+    created_by?: StringFieldUpdateOperationsInput | string
+    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  }
+
+  export type order_image_checklistsCreateManyInput = {
+    id?: string
+    order_checklist_detail_id: string
+    filename: string
+    updated_by: string
+    created_by: string
+    updated_at?: Date | string | null
+    created_at?: Date | string | null
+  }
+
+  export type order_image_checklistsUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    order_checklist_detail_id?: StringFieldUpdateOperationsInput | string
+    filename?: StringFieldUpdateOperationsInput | string
+    updated_by?: StringFieldUpdateOperationsInput | string
+    created_by?: StringFieldUpdateOperationsInput | string
+    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  }
+
+  export type order_image_checklistsUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    order_checklist_detail_id?: StringFieldUpdateOperationsInput | string
+    filename?: StringFieldUpdateOperationsInput | string
+    updated_by?: StringFieldUpdateOperationsInput | string
+    created_by?: StringFieldUpdateOperationsInput | string
+    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  }
+
+  export type order_image_notesCreateInput = {
+    id?: string
+    order_image_checklist_id: string
+    filename: string
+    status: boolean
+    notes: string
+    notes_by: string
+    updated_by: string
+    created_by: string
+    updated_at?: Date | string | null
+    created_at?: Date | string | null
+  }
+
+  export type order_image_notesUncheckedCreateInput = {
+    id?: string
+    order_image_checklist_id: string
+    filename: string
+    status: boolean
+    notes: string
+    notes_by: string
+    updated_by: string
+    created_by: string
+    updated_at?: Date | string | null
+    created_at?: Date | string | null
+  }
+
+  export type order_image_notesUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    order_image_checklist_id?: StringFieldUpdateOperationsInput | string
+    filename?: StringFieldUpdateOperationsInput | string
+    status?: BoolFieldUpdateOperationsInput | boolean
+    notes?: StringFieldUpdateOperationsInput | string
+    notes_by?: StringFieldUpdateOperationsInput | string
+    updated_by?: StringFieldUpdateOperationsInput | string
+    created_by?: StringFieldUpdateOperationsInput | string
+    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  }
+
+  export type order_image_notesUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    order_image_checklist_id?: StringFieldUpdateOperationsInput | string
+    filename?: StringFieldUpdateOperationsInput | string
+    status?: BoolFieldUpdateOperationsInput | boolean
+    notes?: StringFieldUpdateOperationsInput | string
+    notes_by?: StringFieldUpdateOperationsInput | string
+    updated_by?: StringFieldUpdateOperationsInput | string
+    created_by?: StringFieldUpdateOperationsInput | string
+    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  }
+
+  export type order_image_notesCreateManyInput = {
+    id?: string
+    order_image_checklist_id: string
+    filename: string
+    status: boolean
+    notes: string
+    notes_by: string
+    updated_by: string
+    created_by: string
+    updated_at?: Date | string | null
+    created_at?: Date | string | null
+  }
+
+  export type order_image_notesUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    order_image_checklist_id?: StringFieldUpdateOperationsInput | string
+    filename?: StringFieldUpdateOperationsInput | string
+    status?: BoolFieldUpdateOperationsInput | boolean
+    notes?: StringFieldUpdateOperationsInput | string
+    notes_by?: StringFieldUpdateOperationsInput | string
+    updated_by?: StringFieldUpdateOperationsInput | string
+    created_by?: StringFieldUpdateOperationsInput | string
+    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  }
+
+  export type order_image_notesUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    order_image_checklist_id?: StringFieldUpdateOperationsInput | string
+    filename?: StringFieldUpdateOperationsInput | string
+    status?: BoolFieldUpdateOperationsInput | boolean
+    notes?: StringFieldUpdateOperationsInput | string
+    notes_by?: StringFieldUpdateOperationsInput | string
+    updated_by?: StringFieldUpdateOperationsInput | string
+    created_by?: StringFieldUpdateOperationsInput | string
+    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  }
+
   export type sysdiagramsCreateInput = {
     name: string
     principal_id: number
@@ -7399,6 +14473,222 @@ export namespace Prisma {
     _count?: NestedIntFilter<$PrismaModel>
     _min?: NestedBoolFilter<$PrismaModel>
     _max?: NestedBoolFilter<$PrismaModel>
+  }
+
+  export type master_image_checklistsCountOrderByAggregateInput = {
+    id?: SortOrder
+    checklist_detail_id?: SortOrder
+    filename?: SortOrder
+    updated_by?: SortOrder
+    created_by?: SortOrder
+    updated_at?: SortOrder
+    created_at?: SortOrder
+  }
+
+  export type master_image_checklistsMaxOrderByAggregateInput = {
+    id?: SortOrder
+    checklist_detail_id?: SortOrder
+    filename?: SortOrder
+    updated_by?: SortOrder
+    created_by?: SortOrder
+    updated_at?: SortOrder
+    created_at?: SortOrder
+  }
+
+  export type master_image_checklistsMinOrderByAggregateInput = {
+    id?: SortOrder
+    checklist_detail_id?: SortOrder
+    filename?: SortOrder
+    updated_by?: SortOrder
+    created_by?: SortOrder
+    updated_at?: SortOrder
+    created_at?: SortOrder
+  }
+
+  export type order_checklistsCountOrderByAggregateInput = {
+    id?: SortOrder
+    checklist_id?: SortOrder
+    order_id?: SortOrder
+    model?: SortOrder
+    workcenter?: SortOrder
+    status?: SortOrder
+    date_open?: SortOrder
+    date_closed?: SortOrder
+    updated_by?: SortOrder
+    created_by?: SortOrder
+    updated_at?: SortOrder
+    created_at?: SortOrder
+  }
+
+  export type order_checklistsMaxOrderByAggregateInput = {
+    id?: SortOrder
+    checklist_id?: SortOrder
+    order_id?: SortOrder
+    model?: SortOrder
+    workcenter?: SortOrder
+    status?: SortOrder
+    date_open?: SortOrder
+    date_closed?: SortOrder
+    updated_by?: SortOrder
+    created_by?: SortOrder
+    updated_at?: SortOrder
+    created_at?: SortOrder
+  }
+
+  export type order_checklistsMinOrderByAggregateInput = {
+    id?: SortOrder
+    checklist_id?: SortOrder
+    order_id?: SortOrder
+    model?: SortOrder
+    workcenter?: SortOrder
+    status?: SortOrder
+    date_open?: SortOrder
+    date_closed?: SortOrder
+    updated_by?: SortOrder
+    created_by?: SortOrder
+    updated_at?: SortOrder
+    created_at?: SortOrder
+  }
+
+  export type order_checklist_detailsCountOrderByAggregateInput = {
+    id?: SortOrder
+    order_checklist_id?: SortOrder
+    checked?: SortOrder
+    notes_by_prod?: SortOrder
+    notes_by_qc?: SortOrder
+    updated_by?: SortOrder
+    created_by?: SortOrder
+    updated_at?: SortOrder
+    created_at?: SortOrder
+  }
+
+  export type order_checklist_detailsMaxOrderByAggregateInput = {
+    id?: SortOrder
+    order_checklist_id?: SortOrder
+    checked?: SortOrder
+    notes_by_prod?: SortOrder
+    notes_by_qc?: SortOrder
+    updated_by?: SortOrder
+    created_by?: SortOrder
+    updated_at?: SortOrder
+    created_at?: SortOrder
+  }
+
+  export type order_checklist_detailsMinOrderByAggregateInput = {
+    id?: SortOrder
+    order_checklist_id?: SortOrder
+    checked?: SortOrder
+    notes_by_prod?: SortOrder
+    notes_by_qc?: SortOrder
+    updated_by?: SortOrder
+    created_by?: SortOrder
+    updated_at?: SortOrder
+    created_at?: SortOrder
+  }
+
+  export type order_checklist_notesCountOrderByAggregateInput = {
+    id?: SortOrder
+    order_checklist_detail_id?: SortOrder
+    checked_status?: SortOrder
+    notes?: SortOrder
+    notes_by?: SortOrder
+    updated_by?: SortOrder
+    created_by?: SortOrder
+    updated_at?: SortOrder
+    created_at?: SortOrder
+  }
+
+  export type order_checklist_notesMaxOrderByAggregateInput = {
+    id?: SortOrder
+    order_checklist_detail_id?: SortOrder
+    checked_status?: SortOrder
+    notes?: SortOrder
+    notes_by?: SortOrder
+    updated_by?: SortOrder
+    created_by?: SortOrder
+    updated_at?: SortOrder
+    created_at?: SortOrder
+  }
+
+  export type order_checklist_notesMinOrderByAggregateInput = {
+    id?: SortOrder
+    order_checklist_detail_id?: SortOrder
+    checked_status?: SortOrder
+    notes?: SortOrder
+    notes_by?: SortOrder
+    updated_by?: SortOrder
+    created_by?: SortOrder
+    updated_at?: SortOrder
+    created_at?: SortOrder
+  }
+
+  export type order_image_checklistsCountOrderByAggregateInput = {
+    id?: SortOrder
+    order_checklist_detail_id?: SortOrder
+    filename?: SortOrder
+    updated_by?: SortOrder
+    created_by?: SortOrder
+    updated_at?: SortOrder
+    created_at?: SortOrder
+  }
+
+  export type order_image_checklistsMaxOrderByAggregateInput = {
+    id?: SortOrder
+    order_checklist_detail_id?: SortOrder
+    filename?: SortOrder
+    updated_by?: SortOrder
+    created_by?: SortOrder
+    updated_at?: SortOrder
+    created_at?: SortOrder
+  }
+
+  export type order_image_checklistsMinOrderByAggregateInput = {
+    id?: SortOrder
+    order_checklist_detail_id?: SortOrder
+    filename?: SortOrder
+    updated_by?: SortOrder
+    created_by?: SortOrder
+    updated_at?: SortOrder
+    created_at?: SortOrder
+  }
+
+  export type order_image_notesCountOrderByAggregateInput = {
+    id?: SortOrder
+    order_image_checklist_id?: SortOrder
+    filename?: SortOrder
+    status?: SortOrder
+    notes?: SortOrder
+    notes_by?: SortOrder
+    updated_by?: SortOrder
+    created_by?: SortOrder
+    updated_at?: SortOrder
+    created_at?: SortOrder
+  }
+
+  export type order_image_notesMaxOrderByAggregateInput = {
+    id?: SortOrder
+    order_image_checklist_id?: SortOrder
+    filename?: SortOrder
+    status?: SortOrder
+    notes?: SortOrder
+    notes_by?: SortOrder
+    updated_by?: SortOrder
+    created_by?: SortOrder
+    updated_at?: SortOrder
+    created_at?: SortOrder
+  }
+
+  export type order_image_notesMinOrderByAggregateInput = {
+    id?: SortOrder
+    order_image_checklist_id?: SortOrder
+    filename?: SortOrder
+    status?: SortOrder
+    notes?: SortOrder
+    notes_by?: SortOrder
+    updated_by?: SortOrder
+    created_by?: SortOrder
+    updated_at?: SortOrder
+    created_at?: SortOrder
   }
 
   export type IntFilter<$PrismaModel = never> = {

@@ -166,6 +166,78 @@ exports.Prisma.Master_checklistsScalarFieldEnum = {
   created_at: 'created_at'
 };
 
+exports.Prisma.Master_image_checklistsScalarFieldEnum = {
+  id: 'id',
+  checklist_detail_id: 'checklist_detail_id',
+  filename: 'filename',
+  updated_by: 'updated_by',
+  created_by: 'created_by',
+  updated_at: 'updated_at',
+  created_at: 'created_at'
+};
+
+exports.Prisma.Order_checklistsScalarFieldEnum = {
+  id: 'id',
+  checklist_id: 'checklist_id',
+  order_id: 'order_id',
+  model: 'model',
+  workcenter: 'workcenter',
+  status: 'status',
+  date_open: 'date_open',
+  date_closed: 'date_closed',
+  updated_by: 'updated_by',
+  created_by: 'created_by',
+  updated_at: 'updated_at',
+  created_at: 'created_at'
+};
+
+exports.Prisma.Order_checklist_detailsScalarFieldEnum = {
+  id: 'id',
+  order_checklist_id: 'order_checklist_id',
+  checked: 'checked',
+  notes_by_prod: 'notes_by_prod',
+  notes_by_qc: 'notes_by_qc',
+  updated_by: 'updated_by',
+  created_by: 'created_by',
+  updated_at: 'updated_at',
+  created_at: 'created_at'
+};
+
+exports.Prisma.Order_checklist_notesScalarFieldEnum = {
+  id: 'id',
+  order_checklist_detail_id: 'order_checklist_detail_id',
+  checked_status: 'checked_status',
+  notes: 'notes',
+  notes_by: 'notes_by',
+  updated_by: 'updated_by',
+  created_by: 'created_by',
+  updated_at: 'updated_at',
+  created_at: 'created_at'
+};
+
+exports.Prisma.Order_image_checklistsScalarFieldEnum = {
+  id: 'id',
+  order_checklist_detail_id: 'order_checklist_detail_id',
+  filename: 'filename',
+  updated_by: 'updated_by',
+  created_by: 'created_by',
+  updated_at: 'updated_at',
+  created_at: 'created_at'
+};
+
+exports.Prisma.Order_image_notesScalarFieldEnum = {
+  id: 'id',
+  order_image_checklist_id: 'order_image_checklist_id',
+  filename: 'filename',
+  status: 'status',
+  notes: 'notes',
+  notes_by: 'notes_by',
+  updated_by: 'updated_by',
+  created_by: 'created_by',
+  updated_at: 'updated_at',
+  created_at: 'created_at'
+};
+
 exports.Prisma.SysdiagramsScalarFieldEnum = {
   name: 'name',
   principal_id: 'principal_id',
@@ -190,6 +262,12 @@ exports.Prisma.ModelName = {
   master_checklist_details: 'master_checklist_details',
   users: 'users',
   master_checklists: 'master_checklists',
+  master_image_checklists: 'master_image_checklists',
+  order_checklists: 'order_checklists',
+  order_checklist_details: 'order_checklist_details',
+  order_checklist_notes: 'order_checklist_notes',
+  order_image_checklists: 'order_image_checklists',
+  order_image_notes: 'order_image_notes',
   sysdiagrams: 'sysdiagrams'
 };
 
